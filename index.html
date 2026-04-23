@@ -69,12 +69,12 @@
 
   /* NAV */
   .nav{background:var(--cream);position:sticky;top:0;z-index:50;border-bottom:1px solid var(--line)}
-  .nav-inner{max-width:1240px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-  .brand{display:flex;align-items:center;gap:14px}
-  .brand-logo-img{width:56px;height:56px;object-fit:contain;display:block}
+  .nav-inner{max-width:1240px;margin:0 auto;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+  .brand{display:flex;align-items:center;gap:16px}
+  .brand-logo-img{width:86px;height:86px;object-fit:contain;display:block}
   .brand-text{display:flex;flex-direction:column}
-  .brand-name{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--ink);letter-spacing:.01em;line-height:1}
-  .brand-tag{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.28em;color:var(--steel-500);margin-top:5px;text-transform:uppercase;font-weight:600}
+  .brand-name{font-family:'Playfair Display',serif;font-size:24px;font-weight:600;color:var(--ink);letter-spacing:.01em;line-height:1}
+  .brand-tag{font-family:'Inter',sans-serif;font-size:10.5px;letter-spacing:.3em;color:var(--steel-500);margin-top:6px;text-transform:uppercase;font-weight:600}
   .nav-links{display:flex;gap:36px;font-size:15px;color:var(--ink-soft);font-weight:500}
   .nav-links a{transition:color .2s;position:relative}
   .nav-links a:hover,.nav-links a.active{color:var(--navy-2)}
@@ -534,6 +534,235 @@
     .hero-cta::before,.banner-cta::before,.form-btn::before,.nav-cta::before{display:none}
     .hero-video video{display:none}
   }
+
+  /* =================================================================
+     MOBILE TUNING — refinamento completo para telas pequenas
+     ================================================================= */
+  @media(max-width:980px){
+    .hero-grid{grid-template-columns:1fr;gap:32px;padding-bottom:72px}
+    .hero-eye{margin-top:16px}
+    .hero h1{max-width:100%}
+    .logo-wrap{min-height:420px;max-width:360px;margin:0 auto}
+    .logo-frame{width:100%;height:380px}
+    .logo-badge{bottom:24px;left:24px;right:24px}
+    .logo-stats{bottom:-14px;right:0}
+  }
+
+  @media(max-width:640px){
+    .wrap{padding:0 20px}
+
+    /* TOPBAR: empilha e centraliza */
+    .topbar{font-size:11px;padding:10px 0}
+    .topbar-inner{gap:8px;justify-content:center;padding:0 20px}
+    .topbar-left{gap:10px 16px;font-size:11px;justify-content:center;width:100%}
+    .topbar-left > span:nth-child(3){display:none}
+    .topbar-right{width:100%;justify-content:center;display:flex}
+    .topbar-right a{font-size:13px}
+
+    /* NAV compacto */
+    .nav-inner{padding:10px 20px;gap:10px}
+    .brand{gap:12px}
+    .brand-logo-img{width:64px;height:64px}
+    .brand-name{font-size:18px}
+    .brand-tag{font-size:9px;letter-spacing:.24em;margin-top:4px}
+    .nav-cta{padding:9px 14px;font-size:11px;gap:6px}
+    .nav-cta svg{width:12px;height:12px}
+
+    /* HERO compacto e bonito */
+    .hero{padding:28px 0 0}
+    .hero-grid{gap:28px;padding-bottom:54px}
+    .hero-eye{margin-top:8px;font-size:11px;letter-spacing:.18em;gap:10px;margin-bottom:16px}
+    .hero-eye::before{width:28px}
+    .hero h1{font-size:clamp(28px,7.8vw,38px);margin-bottom:18px;line-height:1.15;letter-spacing:-.01em}
+    .hero-sub{font-size:15px;margin-bottom:20px;line-height:1.55}
+    .hero-live{font-size:11px;padding:6px 12px;margin-bottom:12px;gap:7px}
+    .hero-live::before{width:7px;height:7px}
+    .hero-online{font-size:11px;margin-bottom:22px;padding-bottom:16px;letter-spacing:.16em}
+    .hero-cta{padding:15px 22px;font-size:13px;width:100%;max-width:340px;justify-content:center;margin-bottom:28px}
+    .hero-cta svg{width:18px;height:18px}
+    .hero-rating{flex-direction:row;align-items:center;gap:12px;flex-wrap:wrap}
+    .hero-rating-stars svg{width:16px;height:16px}
+    .hero-rating-text{font-size:13px;flex:1;min-width:140px}
+
+    /* LOGO FRAME mobile */
+    .logo-wrap{min-height:340px;max-width:300px}
+    .logo-frame{height:320px}
+    .logo-frame .logo-big{width:66%}
+    .logo-badge{font-size:10px;letter-spacing:.22em;bottom:22px;left:22px;right:22px;padding-top:12px}
+    .logo-stats{bottom:-10px;right:0;left:auto;transform:none;flex-direction:row;box-shadow:0 14px 28px rgba(0,0,0,.35)}
+    .pstat{padding:10px 14px;min-width:88px}
+    .pstat-num{font-size:18px}
+    .pstat-lbl{font-size:10px;margin-top:4px}
+    .hero-video video{opacity:.4}
+
+    /* CLIENT BANNER horizontal mais contido */
+    .client-banner-img{max-height:130px}
+
+    /* QUOTE */
+    .quote-band{padding:48px 0 12px}
+    .quote-row{gap:14px}
+    .quote-mark svg{width:42px;height:42px}
+    .quote-band h3{font-size:19px;line-height:1.35}
+    .quote-band[data-in]::after{width:80px;margin-top:28px}
+
+    /* BANNER seção 2 */
+    .banner{padding:56px 0 64px}
+    .banner-grid{gap:32px}
+    .banner-eye{font-size:11px;letter-spacing:.16em;margin-bottom:14px}
+    .banner h2{font-size:26px;margin-bottom:18px;line-height:1.2}
+    .banner-sub{font-size:14px;padding:10px 18px;margin-bottom:24px}
+    .banner-cta{padding:14px 24px;font-size:13px;width:100%;max-width:320px;justify-content:center}
+    .banner-art{max-width:320px}
+
+    /* SECTIONS geral */
+    .section{padding:72px 0}
+    .shead{margin-bottom:40px}
+    .shead-eye{font-size:11px;letter-spacing:.18em;margin-bottom:12px}
+    .shead h2{font-size:28px;line-height:1.15;margin-bottom:14px}
+    .shead p{font-size:15px;line-height:1.55}
+    .shead-flourish{max-width:180px;margin-bottom:18px}
+    .shead-flourish svg{width:18px;height:18px}
+
+    /* AREAS */
+    .areas{gap:14px}
+    .area{padding:24px 20px;border-radius:14px}
+    .area-ico{width:44px;height:44px;margin-bottom:16px}
+    .area-ico svg{width:22px;height:22px}
+    .area h3{font-size:19px;margin-bottom:10px}
+    .area p{font-size:14px;margin-bottom:14px}
+    .area-list li{font-size:12.5px}
+
+    /* ABOUT */
+    .about-grid{gap:32px}
+    .about-photo{max-width:280px;padding:20px;border-radius:6px 6px 6px 60px}
+    .about-photo-inner{padding:20px 12px;gap:14px}
+    .about-photo-inner img{width:72%;max-width:180px;padding:18px}
+    .about-body h3{font-size:26px;margin-bottom:16px}
+    .about-body p{font-size:15px;line-height:1.65}
+    .about-body p:first-of-type::first-letter{font-size:3em;padding-right:10px}
+    .about-credentials{margin-top:22px;padding-top:20px}
+    .about-credentials li{font-size:14px;gap:12px}
+    .about-credentials li svg{width:20px;height:20px}
+
+    /* STEPS */
+    .steps{gap:28px}
+    .step-num{width:58px;height:58px;font-size:22px;margin-bottom:14px}
+    .step h4{font-size:17px}
+    .step p{font-size:13px}
+
+    /* TESTIMONIALS */
+    .testimonials-hero{gap:24px}
+    .trustpilot-card{padding:22px 20px}
+    .trustpilot-excellent{font-size:18px;letter-spacing:.1em}
+    .trustpilot-stars svg{width:22px;height:22px}
+    .trustpilot-base{font-size:12px}
+    .trustpilot-google svg{width:72px;height:24px}
+    .gcards{gap:12px}
+    .gcard{padding:18px 16px;border-radius:12px;gap:12px}
+    .gcard-avatar{width:36px;height:36px;font-size:14px}
+    .gcard-name{font-size:14px}
+    .gcard-date{font-size:11px}
+    .gcard-rating svg{width:14px;height:14px}
+    .gcard-body{font-size:13.5px;line-height:1.55}
+    .gcard-google-ico{width:18px;height:18px}
+    .testimonials-cta a{padding:12px 22px;font-size:13px}
+
+    /* DIAGNÓSTICO */
+    .diagnostic{padding:64px 0}
+    .diagnostic-wrap{padding:0 20px}
+    .diagnostic-eye{font-size:11px;padding:5px 12px;letter-spacing:.18em}
+    .diagnostic h2{font-size:28px;line-height:1.12;margin-bottom:14px}
+    .diagnostic .lead{font-size:15px;margin-bottom:28px}
+    .quiz{padding:24px 18px;min-height:auto;border-radius:16px}
+    .quiz-step-num{font-size:11px;margin-bottom:8px}
+    .quiz-step h3{font-size:19px;margin-bottom:18px;line-height:1.3}
+    .quiz-opt{padding:14px 16px;font-size:14px;gap:12px;border-radius:12px}
+    .quiz-opt-ico{width:32px;height:32px}
+    .quiz-opt svg{width:16px;height:16px}
+    .quiz-opt::after{font-size:17px}
+    .quiz-result h3{font-size:22px}
+    .quiz-result p{font-size:14.5px;line-height:1.6}
+    .quiz-result-cta{padding:14px 24px;font-size:14px;width:100%;max-width:320px;justify-content:center}
+
+    /* FAQ */
+    .faq-search input{padding:12px 18px 12px 44px;font-size:14px}
+    .faq-search svg{left:16px;width:18px;height:18px}
+    .q summary{padding:18px 52px 18px 20px;font-size:16px}
+    .q-body{padding:0 20px 20px;font-size:14px;line-height:1.65}
+
+    /* CTA BAND */
+    .cta-band{padding:64px 0}
+    .cta-inner h2{font-size:28px;line-height:1.12;margin-bottom:16px}
+    .cta-inner p{font-size:15px;margin-bottom:26px;line-height:1.55}
+
+    /* CONTATO */
+    .contact-grid{gap:32px}
+    .contact-info h3{font-size:24px;margin-bottom:12px}
+    .contact-info > p{font-size:14px;margin-bottom:24px}
+    .contact-list{gap:14px}
+    .contact-list li{padding:14px 16px;gap:12px;border-radius:10px}
+    .contact-ico{width:40px;height:40px;border-radius:9px}
+    .contact-ico svg{width:18px;height:18px}
+    .contact-label{font-size:10px;letter-spacing:.12em;margin-bottom:3px}
+    .contact-value{font-size:14px}
+    .contact-small{font-size:12px}
+    .contact-form{padding:28px 22px;border-radius:14px}
+    .contact-form h4{font-size:20px}
+    .contact-form > p{font-size:13px;margin-bottom:20px}
+    .ff label{font-size:11px}
+    .ff input,.ff select,.ff textarea{padding:11px 13px;font-size:14px}
+    .form-btn{padding:14px;font-size:13px}
+
+    /* FOOTER */
+    .foot{padding:48px 0 20px}
+    .foot-top{gap:28px;margin-bottom:28px;padding-bottom:24px}
+    .foot-brand .brand-logo-img{width:44px;height:44px}
+    .foot-brand .brand-name{font-size:17px}
+    .foot-brand p{font-size:13px;margin-top:12px}
+    .foot-social{margin-top:14px}
+    .foot h5{font-size:12px;margin-bottom:12px}
+    .foot a{font-size:13px}
+    .foot ul{gap:8px}
+    .foot-bottom{flex-direction:column;gap:6px;text-align:center;font-size:11px}
+    .foot-disclaimer{font-size:10.5px;padding:0 12px;margin-top:14px}
+
+    /* FAB menor */
+    .wa-fab{bottom:16px;right:16px;padding:12px;width:54px;height:54px}
+    .wa-fab svg{width:24px;height:24px}
+  }
+
+  @media(max-width:400px){
+    .wrap{padding:0 16px}
+    .topbar-inner{padding:0 16px}
+    .nav-inner{padding:8px 16px}
+    .brand{gap:10px}
+    .brand-logo-img{width:56px;height:56px}
+    .brand-name{font-size:16px}
+    .brand-tag{font-size:8.5px}
+    .nav-cta{padding:8px 12px;font-size:10.5px}
+    .nav-cta span,.nav-cta{letter-spacing:.01em}
+    .hero h1{font-size:clamp(24px,8vw,32px)}
+    .logo-wrap{min-height:300px;max-width:260px}
+    .logo-frame{height:280px}
+    .logo-frame .logo-big{width:62%}
+    .logo-badge{bottom:18px;left:18px;right:18px;font-size:9.5px}
+    .logo-stats{bottom:-6px}
+    .pstat{padding:8px 11px;min-width:78px}
+    .pstat-num{font-size:15.5px}
+    .pstat-lbl{font-size:9.5px}
+    .shead h2,.banner h2,.cta-inner h2,.diagnostic h2{font-size:24px}
+    .client-banner-img{max-height:100px}
+    .section{padding:56px 0}
+    .area h3{font-size:18px}
+    .about-photo{max-width:240px}
+    .step-num{width:52px;height:52px;font-size:20px}
+  }
+
+  /* TAP targets mínimos 44x44 no mobile pra acessibilidade */
+  @media(max-width:640px){
+    .nav-links a,.foot a{padding:6px 0;display:inline-block;min-height:44px;display:flex;align-items:center}
+    .topbar-right a,.contact-value a{padding:4px 0}
+  }
 </style>
 </head>
 <body data-scroll-progress>
@@ -981,7 +1210,7 @@
           <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <div class="trustpilot-base">Depoimentos reais <strong>publicados no Google</strong></div>
+        <div class="trustpilot-base"><strong>5,0</strong> de 5 · com base em <strong>57 avaliações</strong> no Google</div>
         <div class="trustpilot-google">
           <svg viewBox="0 0 272 92" xmlns="http://www.w3.org/2000/svg">
             <path d="M115.75 47.18c0 12.77-9.99 22.18-22.25 22.18-12.26 0-22.25-9.41-22.25-22.18 0-12.86 9.99-22.18 22.25-22.18 12.26 0 22.25 9.31 22.25 22.18zm-9.74 0c0-7.98-5.79-13.44-12.51-13.44-6.72 0-12.51 5.46-12.51 13.44 0 7.9 5.79 13.44 12.51 13.44 6.72 0 12.51-5.55 12.51-13.44z" fill="#ea4335"/>
@@ -1113,7 +1342,7 @@
 
     <div class="testimonials-cta">
       <a href="https://www.google.com/search?q=Breno+Lima+Advocacia+Cabo+de+Santo+Agostinho">
-        Ver todas as avaliações no Google →
+        Ver todas as 57 avaliações no Google →
       </a>
     </div>
   </div>
@@ -1210,9 +1439,9 @@
           <li>
             <div class="contact-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
             <div>
-              <div class="contact-label">Atendimento</div>
-              <div class="contact-value">Cabo de Santo Agostinho/PE · Recife e região</div>
-              <div class="contact-small">Atendimento online em todo Brasil · endereço presencial informado após agendamento</div>
+              <div class="contact-label">Endereço</div>
+              <div class="contact-value"><a href="https://www.google.com/maps/search/?api=1&query=Av.+Pref.+Diomedes+Ferreira+de+Melo%2C+105+A+-+Pte.+dos+Carvalhos%2C+Cabo+de+Santo+Agostinho+-+PE" target="_blank" rel="noopener">Av. Pref. Diomedes Ferreira de Melo, 105 A</a></div>
+              <div class="contact-small">1º Andar · Ponte dos Carvalhos · Cabo de Santo Agostinho/PE · CEP 54580-225 — atendimento presencial com agendamento prévio · online em todo Brasil</div>
             </div>
           </li>
           <li>
@@ -1311,7 +1540,7 @@
 
     <div class="foot-bottom">
       <div>© 2026 Breno Lima Advocacia · OAB/PE</div>
-      <div>Cabo de Santo Agostinho/PE · Recife · Atendimento online em todo Brasil</div>
+      <div>Av. Pref. Diomedes Ferreira de Melo, 105 A · 1º Andar · Ponte dos Carvalhos · Cabo de Santo Agostinho/PE · 54580-225</div>
     </div>
     <p class="foot-disclaimer">Este site tem caráter meramente informativo, em conformidade com o Provimento CFOAB 205/2021 e o Código de Ética e Disciplina da OAB. Depoimentos autorizados pelos clientes; resultados apresentados referem-se a casos concretos e não garantem idêntico resultado em novas demandas. Captação de clientela é vedada pelo estatuto da advocacia.</p>
   </div>
