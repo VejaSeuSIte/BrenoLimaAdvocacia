@@ -24,6 +24,7 @@
 <meta name="twitter:description" content="Atendimento direto, sem intermediário. Análise inicial gratuita pelo WhatsApp. Cabo de Santo Agostinho/PE, Recife e online em todo Brasil." />
 <meta name="twitter:image" content="https://vejaseusite.github.io/BrenoLimaAdvocacia/assets/og-image.jpg" />
 <link rel="icon" type="image/png" href="assets/logo.png" />
+<link rel="preload" as="image" href="assets/logo.png" fetchpriority="high" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
@@ -502,7 +503,7 @@
   .hero-online{animation:vs-fadeUp .9s cubic-bezier(.22,.8,.24,1) .44s both}
   .hero-cta{animation:vs-fadeUp .9s cubic-bezier(.22,.8,.24,1) .56s both}
   .hero-rating{animation:vs-fadeUp .9s cubic-bezier(.22,.8,.24,1) .68s both}
-  .logo-wrap{animation:vs-fadeScale 1.3s cubic-bezier(.22,.8,.24,1) .25s both}
+  .logo-wrap{animation:vs-fadeScale .55s cubic-bezier(.22,.8,.24,1) 0s both}
   .logo-stats{animation:vs-fadeRight .9s cubic-bezier(.22,.8,.24,1) 1.4s both}
 
   /* Live-dot badge */
@@ -644,12 +645,12 @@
      MOBILE TUNING — refinamento completo para telas pequenas
      ================================================================= */
   @media(max-width:980px){
-    .hero-grid{grid-template-columns:1fr;gap:32px;padding-bottom:72px}
+    .hero-grid{grid-template-columns:1fr;gap:28px;padding-bottom:64px}
     .hero-eye{margin-top:16px}
     .hero h1{max-width:100%}
-    .logo-wrap{min-height:420px;max-width:360px;margin:0 auto}
-    .logo-frame{width:100%;height:380px}
-    .logo-badge{bottom:24px;left:24px;right:24px}
+    .logo-wrap{min-height:auto;max-width:380px;margin:0 auto;padding:16px 0}
+    .logo-frame{width:100%;height:auto;aspect-ratio:1/1}
+    .logo-frame .logo-big{width:100%}
     .logo-stats{bottom:-14px;right:0}
   }
 
@@ -686,21 +687,30 @@
     .hero-rating-stars svg{width:16px;height:16px}
     .hero-rating-text{font-size:13px;flex:1;min-width:140px}
 
-    /* LOGO FRAME mobile */
-    .logo-wrap{min-height:340px;max-width:300px}
-    .logo-frame{height:320px}
-    .logo-frame .logo-big{width:66%}
-    .logo-badge{font-size:10px;letter-spacing:.22em;bottom:22px;left:22px;right:22px;padding-top:12px}
+    /* LOGO FRAME mobile — circular e proporcional */
+    .logo-wrap{min-height:auto;max-width:300px;padding:8px 0}
+    .logo-frame{height:auto;width:100%;aspect-ratio:1/1}
+    .logo-frame .logo-big{width:100%}
+    .logo-frame::before{inset:-20px}
+    .logo-frame::after{inset:-8px}
     .logo-stats{bottom:-10px;right:0;left:auto;transform:none;flex-direction:row;box-shadow:0 14px 28px rgba(0,0,0,.35)}
     .pstat{padding:10px 14px;min-width:88px}
     .pstat-num{font-size:18px}
     .pstat-lbl{font-size:10px;margin-top:4px}
-    .herald-corner{width:60px;height:60px}
-    .herald-stars svg{transform:scale(.8)}
-    .herald-frame{top:14px;left:14px;right:14px;bottom:80px}
 
-    /* CLIENT BANNER — deixa proporção natural */
-    .client-banner-img{max-height:none}
+    /* Ornamentos heráldicos mobile — compactos e alinhados */
+    .herald-corner{width:52px;height:52px}
+    .herald-corner.tl,.herald-corner.tr{top:12px}
+    .herald-corner.tl,.herald-corner.bl{left:12px}
+    .herald-corner.tr,.herald-corner.br{right:12px}
+    .hero .herald-corner.bl,.hero .herald-corner.br{bottom:70px}
+    .herald-stars svg{transform:scale(.7)}
+    .herald-frame{top:12px;left:12px;right:12px}
+    .hero .herald-frame{bottom:70px}
+
+    /* CLIENT BANNER mobile — altura fixa pra não sumir a cena */
+    .client-banner{min-height:220px}
+    .client-banner-img{width:100%;height:220px;object-fit:cover;object-position:center;max-height:none}
 
     /* QUOTE */
     .quote-band{padding:48px 0 12px}
@@ -843,16 +853,19 @@
     .nav-cta{padding:8px 12px;font-size:10.5px}
     .nav-cta span,.nav-cta{letter-spacing:.01em}
     .hero h1{font-size:clamp(24px,8vw,32px)}
-    .logo-wrap{min-height:300px;max-width:260px}
-    .logo-frame{height:280px}
-    .logo-frame .logo-big{width:62%}
-    .logo-badge{bottom:18px;left:18px;right:18px;font-size:9.5px}
+    .logo-wrap{min-height:auto;max-width:260px;padding:4px 0}
+    .logo-frame{height:auto;width:100%;aspect-ratio:1/1}
+    .logo-frame .logo-big{width:100%}
+    .logo-frame::before{inset:-14px}
+    .logo-frame::after{inset:-6px}
     .logo-stats{bottom:-6px}
     .pstat{padding:8px 11px;min-width:78px}
     .pstat-num{font-size:15.5px}
     .pstat-lbl{font-size:9.5px}
     .shead h2,.banner h2,.cta-inner h2,.diagnostic h2{font-size:24px}
-    .client-banner-img{max-height:none}
+    .herald-corner{width:44px;height:44px}
+    .client-banner{min-height:180px}
+    .client-banner-img{height:180px}
     .section{padding:56px 0}
     .area h3{font-size:18px}
     .about-photo{max-width:240px}
@@ -1009,7 +1022,7 @@
 
       <div class="logo-wrap">
         <div class="logo-frame">
-          <img class="logo-big" src="assets/logo.png" alt="Logotipo Breno Lima Advocacia" />
+          <img class="logo-big" src="assets/logo.png" alt="Logotipo Breno Lima Advocacia" fetchpriority="high" decoding="async" />
           <div class="logo-badge">Advocacia</div>
         </div>
       </div>
