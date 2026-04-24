@@ -195,22 +195,22 @@
   .hero-rating-text{font-size:14px;color:#cbd5e4;line-height:1.45}
   .hero-rating-text strong{color:#fff;font-weight:700}
 
-  /* HERO LOGO HORIZONTAL — selo + wordmark lado a lado, centralizado */
+  /* HERO LOGO HORIZONTAL — grid 3 colunas: divisor no centro real da tela */
   .hero-logo{
-    display:flex;align-items:center;justify-content:center;gap:40px;
+    display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:40px;
     padding:80px 32px 48px;position:relative;
     max-width:1100px;margin:0 auto;
   }
   .hero-seal{
-    width:220px;height:220px;flex-shrink:0;object-fit:contain;
+    width:220px;height:220px;justify-self:end;object-fit:contain;
     filter:drop-shadow(0 16px 36px rgba(0,0,0,.35)) drop-shadow(0 0 28px rgba(212,175,55,.25));
   }
   .hero-logo-divider{
-    width:1px;height:160px;flex-shrink:0;
+    width:1px;height:180px;
     background:linear-gradient(180deg,transparent,rgba(212,175,55,.7),transparent);
   }
   .hero-wordmark{
-    width:auto;height:160px;max-width:560px;flex-shrink:0;object-fit:contain;
+    height:180px;max-width:480px;justify-self:start;object-fit:contain;object-position:left center;
   }
 
   /* Conteúdo centralizado abaixo da logo */
@@ -241,9 +241,9 @@
   @media(max-width:1020px){
     .hero{padding:40px 0 0}
     .hero-logo{gap:28px;padding:48px 24px 32px}
-    .hero-seal{width:190px;height:190px}
-    .hero-logo-divider{height:140px}
-    .hero-wordmark{height:140px;max-width:440px}
+    .hero-seal{width:180px;height:180px}
+    .hero-logo-divider{height:150px}
+    .hero-wordmark{height:150px;max-width:400px}
     .hero-content{padding-bottom:100px}
   }
   @media(max-width:540px){
@@ -672,14 +672,14 @@
      MOBILE TUNING — refinamento completo para telas pequenas
      ================================================================= */
   @media(max-width:980px){
-    /* Logo vira vertical em tablets: selo em cima, divider horizontal, wordmark embaixo — tudo centralizado */
-    .hero-logo{flex-direction:column;gap:20px;padding:40px 20px 28px;max-width:100%}
-    .hero-seal{width:200px;height:200px}
+    /* Logo vira vertical em tablets: 1 coluna, tudo centralizado */
+    .hero-logo{grid-template-columns:1fr;gap:20px;padding:40px 20px 28px;max-width:100%;justify-items:center}
+    .hero-seal{width:200px;height:200px;justify-self:center}
     .hero-logo-divider{
       width:120px;height:1px;
       background:linear-gradient(90deg,transparent,rgba(212,175,55,.7),transparent);
     }
-    .hero-wordmark{width:100%;height:auto;max-width:420px}
+    .hero-wordmark{width:100%;height:auto;max-width:380px;justify-self:center;object-position:center}
     .hero-content{padding-bottom:80px}
     .hero-eye{margin-top:16px}
     .hero h1{max-width:100%}
