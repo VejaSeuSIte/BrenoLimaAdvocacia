@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Breno Lima Advocacia · Cível, Previdenciário, Trabalhista e Sucessões · Cabo de Santo Agostinho/PE</title>
 <meta name="description" content="Breno Lima Advocacia — escritório dedicado a Direito Cível, Previdenciário, Trabalhista e Sucessões (herança). Cabo de Santo Agostinho, Recife e região. Atendimento online em todo Brasil. Aceita Pix." />
-<meta name="theme-color" content="#1e3a5f" />
+<meta name="theme-color" content="#0c1e3a" />
 <link rel="canonical" href="https://vejaseusite.github.io/BrenoLimaAdvocacia/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Breno Lima Advocacia" />
@@ -30,30 +30,32 @@
 <link rel="stylesheet" href="assets/common.css" />
 <style>
   :root{
-    /* Paleta derivada da identidade Breno Lima Advocacia */
-    --navy-1:#2a4a73;       /* hero top     */
-    --navy-2:#1e3a5f;       /* primary      */
-    --navy-3:#14294a;       /* hero bottom  */
-    --navy-4:#0c1d37;       /* deep footer  */
-    --steel-300:#b8c1cc;    /* cinza claro  */
-    --steel-400:#8a95a0;    /* cinza logo   */
-    --steel-500:#6b7380;    /* cinza médio  */
-    --platinum:#e8ecf1;     /* platina      */
-    --cream:#f8f9fb;        /* fundo claro  */
-    --cream-2:#eef1f6;      /* sand         */
-    --silver-200:#d6dbe2;   /* linhas       */
-    --silver-100:#e5e9ef;   /* linhas soft  */
-    --gold:#c9a959;         /* dourado acento */
-    --gold-d:#a78841;       /* dourado escuro */
-    --ink:#121e33;          /* texto principal */
-    --ink-soft:#2d3a52;     /* texto soft   */
-    --gray:#5c6776;         /* muted text   */
-    --muted:#8a95a0;        /* muted        */
-    --line:#d6dbe2;
-    --line-2:#c2c9d3;
+    /* Paleta heráldica "A Vocação" — alinhada ao brasão Iustitia et Vocatio */
+    --navy-1:#1e3a66;       /* hero top     */
+    --navy-2:#0c1e3a;       /* primary navy da logo */
+    --navy-3:#081729;       /* hero bottom  */
+    --navy-4:#050f1f;       /* deep footer  */
+    --steel-300:#b0bac8;    /* cinza claro  */
+    --steel-400:#8692a4;    /* cinza médio  */
+    --steel-500:#5c6878;    /* cinza escuro */
+    --platinum:#e5ddc5;     /* platina quente (pergaminho) */
+    --cream:#faf6ec;        /* fundo claro — pergaminho sutil */
+    --cream-2:#f0e8d4;      /* sand quente   */
+    --silver-200:#d8cfb8;   /* linhas com warmth */
+    --silver-100:#e6dec6;   /* linhas soft   */
+    --gold:#d4af37;         /* dourado antigo (logo) */
+    --gold-l:#efd78a;       /* highlight dourado */
+    --gold-d:#a88632;       /* sombra dourada */
+    --burgundy:#8b2323;     /* bordô dos livros */
+    --ink:#0c1e3a;          /* texto principal = navy */
+    --ink-soft:#1e3a66;     /* texto soft  */
+    --gray:#5c6878;         /* muted text   */
+    --muted:#8692a4;        /* muted        */
+    --line:#d8cfb8;
+    --line-2:#c4b898;
     --green-wa:#25d366;
     --green-wa-d:#1ea952;
-    --star:#f5b93b;
+    --star:#d4af37;         /* estrelas em dourado da logo */
     --google-blue:#4285f4;
     --google-red:#ea4335;
     --google-yellow:#fbbc04;
@@ -84,7 +86,7 @@
   .nav{background:var(--cream);position:sticky;top:0;z-index:50;border-bottom:1px solid var(--line)}
   .nav-inner{max-width:1240px;margin:0 auto;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;position:relative}
   .nav-burger{display:none;background:transparent;border:0;padding:10px;cursor:pointer;align-items:center;justify-content:center;border-radius:8px;transition:background .15s}
-  .nav-burger:hover{background:rgba(30,58,95,.06)}
+  .nav-burger:hover{background:rgba(12,30,58,.06)}
   .nav-burger svg{width:26px;height:26px;stroke:var(--navy-2);fill:none;stroke-width:2;stroke-linecap:round}
   .nav-burger .bx{transition:transform .25s ease, opacity .2s ease;transform-origin:center}
   .nav.nav-open .nav-burger .bx-top{transform:translateY(7px) rotate(45deg)}
@@ -105,47 +107,99 @@
   @media(max-width:1020px){
     .nav-burger{display:inline-flex}
     .nav-left{gap:0}
-    .nav-links{display:flex;flex-direction:column;gap:0;position:absolute;top:100%;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--line);padding:6px 0;box-shadow:0 18px 36px rgba(12,29,55,.12);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .22s ease, transform .22s ease, visibility 0s linear .22s;z-index:40}
+    .nav-links{display:flex;flex-direction:column;gap:0;position:absolute;top:100%;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--line);padding:6px 0;box-shadow:0 18px 36px rgba(5,15,31,.12);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .22s ease, transform .22s ease, visibility 0s linear .22s;z-index:40}
     .nav.nav-open .nav-links{opacity:1;visibility:visible;transform:translateY(0);transition:opacity .22s ease, transform .22s ease, visibility 0s linear 0s}
     .nav-links a{padding:16px 28px;font-size:16px;border-top:1px solid var(--line);min-height:52px;display:flex;align-items:center}
     .nav-links a:first-child{border-top:0}
-    .nav-links a.active{background:rgba(30,58,95,.04)}
+    .nav-links a.active{background:rgba(12,30,58,.04)}
     .nav-links a.active::after{display:none}
     .nav-cta{margin-left:auto}
   }
 
-  /* HERO */
-  .hero{background:linear-gradient(135deg,var(--navy-1) 0%,var(--navy-3) 100%);color:var(--cream);padding:72px 0 0;position:relative;overflow:hidden}
-  .hero-video{position:absolute;inset:0;z-index:0;overflow:hidden}
-  .hero-video video{width:100%;height:100%;object-fit:cover;opacity:.55;filter:saturate(.85) contrast(1.05)}
-  .hero-video::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,58,95,.62) 0%,rgba(20,41,74,.76) 55%,rgba(12,29,55,.82) 100%);z-index:1}
-  .hero-video::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 30% 40%,transparent 0%,rgba(12,29,55,.35) 60%,rgba(12,29,55,.5) 100%);z-index:2;pointer-events:none}
-  .hero::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L0 30l30 30 30-30z' fill='none' stroke='rgba(255,255,255,.05)' stroke-width='1'/%3E%3C/svg%3E");background-size:60px 60px;pointer-events:none;opacity:.9;z-index:2}
-  .hero::after{content:"";position:absolute;bottom:-1px;left:0;right:0;height:100px;background:var(--cream);clip-path:polygon(0 100%,100% 100%,100% 60%,0 0);z-index:3}
-  .hero .wrap{position:relative;z-index:4}
+  /* HERO — fundo heráldico em camadas (sem video) */
+  .hero{
+    color:var(--cream);padding:72px 0 0;position:relative;overflow:hidden;
+    background:
+      radial-gradient(ellipse 70% 55% at 50% 0%, rgba(212,175,55,.18) 0%, transparent 55%),
+      radial-gradient(circle at 15% 85%, rgba(212,175,55,.08) 0%, transparent 35%),
+      radial-gradient(circle at 85% 85%, rgba(212,175,55,.08) 0%, transparent 35%),
+      radial-gradient(ellipse 120% 80% at 50% 50%, var(--navy-1) 0%, var(--navy-2) 45%, var(--navy-3) 85%, var(--navy-4) 100%);
+  }
+  /* Padrão heráldico de estrelas de 8 pontas muito sutil */
+  .hero::before{
+    content:"";position:absolute;inset:0;pointer-events:none;z-index:1;opacity:.5;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='rgba(212,175,55,0.06)'%3E%3Cpath d='M60 20 L63 32 L75 35 L63 38 L60 50 L57 38 L45 35 L57 32 Z'/%3E%3Cpath d='M20 80 L22 88 L30 90 L22 92 L20 100 L18 92 L10 90 L18 88 Z'/%3E%3Cpath d='M100 80 L102 88 L110 90 L102 92 L100 100 L98 92 L90 90 L98 88 Z'/%3E%3C/g%3E%3C/svg%3E");
+    background-size:180px 180px;
+  }
+  /* Curva decorativa de transição para o cream */
+  .hero::after{content:"";position:absolute;bottom:-1px;left:0;right:0;height:100px;background:var(--cream);clip-path:polygon(0 100%,100% 100%,100% 60%,0 0);z-index:4}
+
+  /* Raios de luz dourada radiais vindos do topo central */
+  .herald-rays{position:absolute;top:-50px;left:50%;transform:translateX(-50%);width:120%;height:520px;pointer-events:none;z-index:1;opacity:.35;
+    background:conic-gradient(from 180deg at 50% 0%,
+      transparent 0deg, transparent 70deg,
+      rgba(212,175,55,.4) 82deg, transparent 96deg,
+      rgba(212,175,55,.25) 108deg, transparent 120deg,
+      transparent 240deg,
+      rgba(212,175,55,.25) 252deg, transparent 264deg,
+      rgba(212,175,55,.4) 278deg, transparent 290deg,
+      transparent 360deg);
+    mask:radial-gradient(ellipse 60% 100% at 50% 0%, #000 0%, transparent 80%);
+    -webkit-mask:radial-gradient(ellipse 60% 100% at 50% 0%, #000 0%, transparent 80%);
+  }
+
+  /* Moldura heráldica dupla (borda interna dourada) */
+  .herald-frame{position:absolute;top:24px;left:24px;right:24px;bottom:120px;border:1px solid rgba(212,175,55,.18);border-radius:2px;pointer-events:none;z-index:2}
+  .herald-frame::before{content:"";position:absolute;inset:6px;border:1px solid rgba(212,175,55,.1);border-radius:2px;pointer-events:none}
+
+  /* Ornamentos SVG nos 4 cantos do hero */
+  .herald-corner{position:absolute;width:90px;height:90px;z-index:3;pointer-events:none;color:var(--gold-l);opacity:.72}
+  .herald-corner svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.2}
+  .herald-corner.tl{top:18px;left:18px}
+  .herald-corner.tr{top:18px;right:18px;transform:scaleX(-1)}
+  .herald-corner.bl{bottom:114px;left:18px;transform:scaleY(-1)}
+  .herald-corner.br{bottom:114px;right:18px;transform:scale(-1,-1)}
+  .herald-corner .corner-star{fill:currentColor;stroke:none}
+
+  /* Constelação de estrelas flutuantes */
+  .herald-stars{position:absolute;inset:0;pointer-events:none;z-index:2;overflow:hidden}
+  .herald-stars svg{position:absolute;color:var(--gold-l);fill:currentColor;filter:drop-shadow(0 0 6px rgba(212,175,55,.5));animation:heroTwinkle 4s ease-in-out infinite}
+  @keyframes heroTwinkle{0%,100%{opacity:.35;transform:scale(1)}50%{opacity:.9;transform:scale(1.15)}}
+  /* posicionamento e delays individuais das estrelas */
+  .star-1{top:12%;left:38%;width:18px;height:18px;animation-delay:0s}
+  .star-2{top:22%;left:8%;width:12px;height:12px;animation-delay:.5s}
+  .star-3{top:8%;right:12%;width:14px;height:14px;animation-delay:1s}
+  .star-4{top:38%;left:22%;width:10px;height:10px;animation-delay:1.5s;opacity:.6}
+  .star-5{top:48%;right:28%;width:16px;height:16px;animation-delay:2s}
+  .star-6{top:62%;left:10%;width:11px;height:11px;animation-delay:2.5s;opacity:.55}
+  .star-7{top:70%;right:8%;width:13px;height:13px;animation-delay:3s}
+  .star-8{top:80%;left:45%;width:9px;height:9px;animation-delay:3.5s;opacity:.5}
+  .star-9{top:30%;right:40%;width:8px;height:8px;animation-delay:.8s;opacity:.45}
+  .star-10{top:85%;right:35%;width:10px;height:10px;animation-delay:2.8s;opacity:.55}
+  .hero .wrap{position:relative;z-index:5}
   .hero-grid{display:grid;grid-template-columns:1fr 460px;gap:56px;align-items:start;padding-bottom:140px}
   .hero-eye{font-size:14px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;font-weight:600;margin-bottom:24px;display:flex;align-items:center;gap:14px;margin-top:72px}
   .hero-eye::before{content:"";width:40px;height:1px;background:var(--gold)}
   .hero h1{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(40px,5.4vw,62px);line-height:1.08;letter-spacing:-.015em;margin-bottom:28px;color:#fff;max-width:18ch}
   .hero h1 em{font-style:italic;color:var(--gold);font-weight:500}
   .hero-sub{font-size:18px;color:#cbd5e4;max-width:48ch;margin-bottom:32px;line-height:1.6}
-  .hero-online{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:#b4c2d6;font-weight:600;margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid rgba(201,169,89,.25);max-width:48ch}
+  .hero-online{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:#b4c2d6;font-weight:600;margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid rgba(212,175,55,.25);max-width:48ch}
   .hero-cta{display:inline-flex;align-items:center;gap:12px;background:var(--green-wa);color:#fff;padding:18px 32px;border-radius:100px;font-size:15px;font-weight:700;letter-spacing:.02em;text-transform:uppercase;transition:all .25s;box-shadow:0 12px 32px rgba(37,211,102,.4);margin-bottom:40px}
   .hero-cta:hover{background:var(--green-wa-d);transform:translateY(-2px);box-shadow:0 16px 40px rgba(37,211,102,.5)}
   .hero-cta svg{width:20px;height:20px;fill:currentColor}
   .hero-rating{display:flex;align-items:center;gap:16px}
   .hero-rating-stars{display:flex;gap:3px;color:var(--star)}
-  .hero-rating-stars svg{width:18px;height:18px;fill:currentColor;filter:drop-shadow(0 0 6px rgba(245,185,59,.3))}
+  .hero-rating-stars svg{width:18px;height:18px;fill:currentColor;filter:drop-shadow(0 0 6px rgba(212,175,55,.3))}
   .hero-rating-text{font-size:14px;color:#cbd5e4;line-height:1.45}
   .hero-rating-text strong{color:#fff;font-weight:700}
 
-  /* HERO LOGO CARD */
+  /* HERO LOGO CARD — adaptado para brasão circular heráldico */
   .logo-wrap{position:relative;height:100%;display:flex;align-items:center;justify-content:center;min-height:520px}
-  .logo-frame{position:relative;width:380px;height:440px;border-radius:12px;background:linear-gradient(160deg,rgba(232,236,241,.1),rgba(232,236,241,.02));border:1px solid rgba(201,169,89,.3);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;box-shadow:0 30px 80px rgba(0,0,0,.35)}
-  .logo-frame::before{content:"";position:absolute;inset:10px;border:1px solid rgba(201,169,89,.18);border-radius:6px;pointer-events:none}
-  .logo-frame::after{content:"";position:absolute;top:20px;left:20px;right:20px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.6}
-  .logo-frame .logo-big{width:78%;filter:drop-shadow(0 10px 30px rgba(0,0,0,.3))}
-  .logo-badge{position:absolute;bottom:32px;left:32px;right:32px;text-align:center;font-family:'Playfair Display',serif;font-size:13px;letter-spacing:.32em;color:var(--gold);text-transform:uppercase;padding-top:16px;border-top:1px solid rgba(201,169,89,.3)}
+  .logo-frame{position:relative;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle at center,rgba(212,175,55,.12) 0%,transparent 70%);display:flex;align-items:center;justify-content:center;box-shadow:none;border:none}
+  .logo-frame::before{content:"";position:absolute;inset:-40px;border-radius:50%;background:radial-gradient(circle at center,rgba(212,175,55,.22) 0%,transparent 60%);pointer-events:none;z-index:0}
+  .logo-frame::after{content:"";position:absolute;inset:-12px;border-radius:50%;border:1px dashed rgba(212,175,55,.3);pointer-events:none;z-index:1}
+  .logo-frame .logo-big{width:100%;height:auto;position:relative;z-index:2;filter:drop-shadow(0 20px 40px rgba(0,0,0,.5)) drop-shadow(0 0 30px rgba(212,175,55,.15))}
+  .logo-badge{display:none}
   .logo-stats{position:absolute;bottom:-20px;right:-20px;z-index:3;display:flex;gap:2px;border-radius:14px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4)}
   .pstat{padding:18px 24px;text-align:center;min-width:124px}
   .pstat.a{background:var(--platinum);color:var(--navy-3)}
@@ -177,10 +231,11 @@
   .quote-band h3{font-family:'Playfair Display',serif;font-weight:600;font-style:italic;font-size:clamp(22px,2.8vw,34px);color:var(--navy-2);line-height:1.3;letter-spacing:-.005em}
   @media(max-width:760px){.quote-row{flex-direction:column;text-align:center;gap:20px}}
 
-  /* BANNER visual do cliente */
-  .client-banner{padding:0;background:var(--navy-3);position:relative;overflow:hidden}
-  .client-banner-img{width:100%;height:auto;display:block;max-height:260px;object-fit:cover;object-position:center}
-  .client-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,41,74,0) 0%,rgba(20,41,74,.08) 100%);pointer-events:none}
+  /* BANNER visual do cliente — Templo da Justiça com brasão central */
+  .client-banner{padding:0;background:var(--navy-2);position:relative;overflow:hidden}
+  .client-banner-img{width:100%;height:auto;display:block}
+  .client-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,30,58,0) 0%,rgba(12,30,58,0) 80%,rgba(12,30,58,.35) 100%);pointer-events:none}
+  .client-banner::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),var(--gold-l),var(--gold),transparent);z-index:2;pointer-events:none}
 
   /* BANNER seção 2 */
   .banner{padding:80px 0 96px;background:var(--cream);position:relative;overflow:hidden}
@@ -194,8 +249,8 @@
   .banner-cta:hover{background:var(--green-wa-d);transform:translateY(-2px)}
   .banner-cta svg{width:18px;height:18px;fill:currentColor}
   .banner-art{position:relative;aspect-ratio:1/1;display:grid;place-items:center}
-  .banner-art-bg{position:absolute;inset:0;background:radial-gradient(circle at 60% 50%,rgba(201,169,89,.18),transparent 70%);z-index:0}
-  .banner-art svg{width:92%;max-width:480px;position:relative;z-index:1;filter:drop-shadow(0 30px 50px rgba(20,41,74,.22))}
+  .banner-art-bg{position:absolute;inset:0;background:radial-gradient(circle at 60% 50%,rgba(212,175,55,.18),transparent 70%);z-index:0}
+  .banner-art svg{width:92%;max-width:480px;position:relative;z-index:1;filter:drop-shadow(0 30px 50px rgba(8,23,41,.22))}
   @media(max-width:980px){.banner-grid{grid-template-columns:1fr;gap:40px}.banner-art{max-width:420px;margin:0 auto}}
 
   /* SECTIONS */
@@ -217,7 +272,7 @@
   .area{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:34px 26px;transition:all .3s;position:relative;overflow:hidden}
   .section.sand .area{background:#fff}
   .area::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--navy-2),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform .3s}
-  .area:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(20,41,74,.12);border-color:var(--navy-2)}
+  .area:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(8,23,41,.12);border-color:var(--navy-2)}
   .area:hover::before{transform:scaleX(1)}
   .area-ico{width:52px;height:52px;border-radius:12px;background:var(--cream-2);color:var(--navy-2);display:grid;place-items:center;margin-bottom:20px;transition:all .3s}
   .area:hover .area-ico{background:var(--navy-2);color:var(--cream)}
@@ -235,8 +290,8 @@
   .about-photo{aspect-ratio:4/5;background:linear-gradient(160deg,var(--navy-1),var(--navy-3));border-radius:8px 8px 8px 80px;display:flex;align-items:flex-end;justify-content:center;position:relative;overflow:hidden;padding:40px}
   .about-photo::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0L0 20l20 20 20-20z' fill='none' stroke='rgba(255,255,255,.08)' stroke-width='.8'/%3E%3C/svg%3E");background-size:40px 40px;opacity:.9}
   .about-photo-inner{position:relative;z-index:1;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding:40px 20px}
-  .about-photo-inner img{width:70%;max-width:240px;filter:drop-shadow(0 20px 30px rgba(0,0,0,.35));background:rgba(255,255,255,.96);padding:24px;border-radius:12px}
-  .about-photo-monogram{font-family:'Playfair Display',serif;font-style:italic;font-size:11px;letter-spacing:.4em;color:var(--gold);text-align:center;text-transform:uppercase;padding-top:16px;border-top:1px solid rgba(201,169,89,.3);width:70%}
+  .about-photo-inner img{width:85%;max-width:280px;filter:drop-shadow(0 20px 30px rgba(0,0,0,.45)) drop-shadow(0 0 24px rgba(212,175,55,.18));background:transparent;padding:0;border-radius:0}
+  .about-photo-monogram{font-family:'Playfair Display',serif;font-style:italic;font-size:11px;letter-spacing:.4em;color:var(--gold);text-align:center;text-transform:uppercase;padding-top:16px;border-top:1px solid rgba(212,175,55,.3);width:70%}
   .about-body h3{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(28px,3.5vw,40px);line-height:1.1;color:var(--ink);margin-bottom:20px;letter-spacing:-.01em}
   .about-body h3 em{font-style:italic;color:var(--navy-2)}
   .about-body p{font-size:16px;color:var(--gray);line-height:1.75;margin-bottom:18px;max-width:60ch}
@@ -263,7 +318,7 @@
 
   /* TESTIMONIALS GOOGLE STYLE */
   .testimonials-hero{display:grid;grid-template-columns:260px 1fr;gap:48px;align-items:center}
-  .trustpilot-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px 24px;text-align:center;box-shadow:0 10px 24px rgba(20,41,74,.06)}
+  .trustpilot-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px 24px;text-align:center;box-shadow:0 10px 24px rgba(8,23,41,.06)}
   .trustpilot-excellent{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;letter-spacing:.14em;color:var(--ink);margin-bottom:10px;text-transform:uppercase}
   .trustpilot-stars{display:flex;justify-content:center;gap:2px;margin-bottom:12px;color:var(--star)}
   .trustpilot-stars svg{width:26px;height:26px;fill:currentColor}
@@ -274,15 +329,15 @@
 
   .gcards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
   .gcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;transition:all .25s;position:relative;display:flex;flex-direction:column;gap:14px}
-  .gcard:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(20,41,74,.1);border-color:var(--navy-2)}
+  .gcard:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(8,23,41,.1);border-color:var(--navy-2)}
   .gcard-head{display:flex;align-items:center;gap:12px}
   .gcard-avatar{width:40px;height:40px;border-radius:50%;flex-shrink:0;display:grid;place-items:center;color:#fff;font-weight:700;font-size:16px;letter-spacing:-.01em}
-  .gcard-avatar.av1{background:linear-gradient(135deg,#2a4a73,#1e3a5f)}
-  .gcard-avatar.av2{background:linear-gradient(135deg,#5c6776,#3d4858)}
-  .gcard-avatar.av3{background:linear-gradient(135deg,#8a95a0,#6b7380)}
-  .gcard-avatar.av4{background:linear-gradient(135deg,#c9a959,#a78841)}
-  .gcard-avatar.av5{background:linear-gradient(135deg,#14294a,#0c1d37)}
-  .gcard-avatar.av6{background:linear-gradient(135deg,#4a6a93,#2a4a73)}
+  .gcard-avatar.av1{background:linear-gradient(135deg,#1e3a66,#0c1e3a)}
+  .gcard-avatar.av2{background:linear-gradient(135deg,#5c6878,#2a3344)}
+  .gcard-avatar.av3{background:linear-gradient(135deg,#8692a4,#5c6878)}
+  .gcard-avatar.av4{background:linear-gradient(135deg,#d4af37,#a88632)}
+  .gcard-avatar.av5{background:linear-gradient(135deg,#081729,#050f1f)}
+  .gcard-avatar.av6{background:linear-gradient(135deg,#1e3a66,#1e3a66)}
   .gcard-who{flex:1;min-width:0}
   .gcard-name{font-size:15px;font-weight:700;color:var(--ink);line-height:1.2}
   .gcard-date{font-size:12px;color:var(--muted);margin-top:2px}
@@ -304,7 +359,7 @@
   /* FAQ */
   .faq{max-width:820px;margin:0 auto}
   .q{background:var(--cream);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;transition:all .2s}
-  .q[open]{border-color:var(--navy-2);background:#fff;box-shadow:0 8px 20px rgba(20,41,74,.05)}
+  .q[open]{border-color:var(--navy-2);background:#fff;box-shadow:0 8px 20px rgba(8,23,41,.05)}
   .q summary{list-style:none;padding:22px 26px;font-family:'Playfair Display',serif;font-size:19px;font-weight:600;line-height:1.3;color:var(--ink);display:flex;justify-content:space-between;gap:18px;align-items:center;cursor:pointer;position:relative;padding-right:52px}
   .q summary::-webkit-details-marker{display:none}
   .q summary::before{content:"";position:absolute;right:34px;width:14px;height:2px;background:var(--navy-2);transition:transform .3s;top:50%;margin-top:-1px}
@@ -312,10 +367,28 @@
   .q[open] summary::after{transform:rotate(90deg);opacity:0}
   .q-body{padding:0 26px 24px;font-size:15px;color:var(--gray);line-height:1.7;font-family:'Inter',sans-serif}
 
-  /* CTA BAND */
-  .cta-band{padding:96px 0;background:linear-gradient(135deg,var(--navy-3) 0%,var(--navy-1) 100%);color:var(--cream);text-align:center;position:relative;overflow:hidden}
-  .cta-band::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L0 30l30 30 30-30z' fill='none' stroke='rgba(255,255,255,.04)' stroke-width='1'/%3E%3C/svg%3E");background-size:60px 60px;pointer-events:none;opacity:.8}
-  .cta-inner{position:relative;z-index:1;max-width:720px;margin:0 auto}
+  /* CTA BAND — mesmo tratamento heráldico do hero */
+  .cta-band{
+    padding:112px 0;color:var(--cream);text-align:center;position:relative;overflow:hidden;
+    background:
+      radial-gradient(ellipse 70% 55% at 50% 0%, rgba(212,175,55,.15) 0%, transparent 55%),
+      radial-gradient(circle at 15% 85%, rgba(212,175,55,.08) 0%, transparent 35%),
+      radial-gradient(circle at 85% 85%, rgba(212,175,55,.08) 0%, transparent 35%),
+      radial-gradient(ellipse 120% 80% at 50% 50%, var(--navy-1) 0%, var(--navy-2) 45%, var(--navy-3) 85%, var(--navy-4) 100%);
+  }
+  .cta-band::before{
+    content:"";position:absolute;inset:0;pointer-events:none;z-index:1;opacity:.5;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='rgba(212,175,55,0.06)'%3E%3Cpath d='M60 20 L63 32 L75 35 L63 38 L60 50 L57 38 L45 35 L57 32 Z'/%3E%3Cpath d='M20 80 L22 88 L30 90 L22 92 L20 100 L18 92 L10 90 L18 88 Z'/%3E%3Cpath d='M100 80 L102 88 L110 90 L102 92 L100 100 L98 92 L90 90 L98 88 Z'/%3E%3C/g%3E%3C/svg%3E");
+    background-size:180px 180px;
+  }
+  /* no cta-band, corners inferiores em bottom:18px (não tem curve) */
+  .cta-band .herald-corner.bl{bottom:18px}
+  .cta-band .herald-corner.br{bottom:18px}
+  /* frame ocupa até a base */
+  .cta-band .herald-frame{bottom:24px}
+  /* wrap acima de tudo */
+  .cta-band .wrap{position:relative;z-index:5}
+  .cta-inner{position:relative;z-index:5;max-width:720px;margin:0 auto}
   .cta-inner h2{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(32px,4.5vw,48px);line-height:1.1;margin-bottom:20px;color:#fff}
   .cta-inner h2 em{font-style:italic;color:var(--gold)}
   .cta-inner p{font-size:18px;color:#cbd5e4;margin-bottom:36px;line-height:1.6;max-width:52ch;margin-left:auto;margin-right:auto}
@@ -336,7 +409,7 @@
   .contact-value a:hover{color:var(--navy-2)}
   .contact-small{font-size:13px;color:var(--gray);margin-top:3px;font-weight:400}
 
-  .contact-form{background:#fff;padding:40px 36px;border-radius:16px;border:1px solid var(--line);box-shadow:0 10px 30px rgba(20,41,74,.08)}
+  .contact-form{background:#fff;padding:40px 36px;border-radius:16px;border:1px solid var(--line);box-shadow:0 10px 30px rgba(8,23,41,.08)}
   .contact-form h4{font-family:'Playfair Display',serif;font-weight:600;font-size:24px;margin-bottom:8px;letter-spacing:-.005em}
   .contact-form h4 em{font-style:italic;color:var(--navy-2)}
   .contact-form>p{font-size:14px;color:var(--gray);margin-bottom:24px;line-height:1.55}
@@ -355,23 +428,23 @@
 
   /* FOOTER */
   .foot{background:var(--navy-4);color:#c2cbd6;padding:64px 0 24px}
-  .foot-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;padding-bottom:32px;border-bottom:1px solid rgba(201,169,89,.15)}
+  .foot-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;padding-bottom:32px;border-bottom:1px solid rgba(212,175,55,.15)}
   .foot-brand .brand{color:#fff;margin-bottom:16px;gap:14px;align-items:center}
   .foot-brand .brand-text{display:flex}
   .foot-brand .brand-name{color:#fff;font-family:'Playfair Display',serif;font-size:22px;font-weight:600;line-height:1}
   .foot-brand .brand-tag{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.28em;margin-top:5px;text-transform:uppercase;font-weight:600}
-  .foot-brand .brand-logo-img{background:#fff;border-radius:10px;padding:8px;width:68px;height:68px;max-height:68px}
+  .foot-brand .brand-logo-img{background:transparent;border-radius:0;padding:0;width:72px;height:72px;max-height:72px;filter:drop-shadow(0 4px 12px rgba(212,175,55,.2))}
   .foot-brand p{font-size:14px;line-height:1.65;max-width:34ch}
   .foot h5{color:#fff;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px;font-weight:700}
   .foot ul{list-style:none;display:grid;gap:10px}
   .foot a{font-size:14px;color:#c2cbd6;transition:color .2s}
   .foot a:hover{color:var(--gold)}
   .foot-social{display:flex;gap:10px;margin-top:18px}
-  .foot-social a{width:36px;height:36px;border-radius:50%;background:rgba(201,169,89,.1);display:grid;place-items:center;color:#c2cbd6;transition:all .2s}
+  .foot-social a{width:36px;height:36px;border-radius:50%;background:rgba(212,175,55,.1);display:grid;place-items:center;color:#c2cbd6;transition:all .2s}
   .foot-social a:hover{background:var(--gold);color:var(--navy-4)}
   .foot-social svg{width:16px;height:16px;fill:currentColor}
-  .foot-bottom{display:flex;justify-content:space-between;gap:20px;font-size:12px;color:#8a95a0;flex-wrap:wrap}
-  .foot-disclaimer{max-width:960px;margin:16px auto 0;text-align:center;font-size:11px;color:#8a95a0;line-height:1.6;padding:0 20px}
+  .foot-bottom{display:flex;justify-content:space-between;gap:20px;font-size:12px;color:#8692a4;flex-wrap:wrap}
+  .foot-disclaimer{max-width:960px;margin:16px auto 0;text-align:center;font-size:11px;color:#8692a4;line-height:1.6;padding:0 20px}
   @media(max-width:880px){.foot-top{grid-template-columns:1fr 1fr}}
   @media(max-width:540px){.foot-top{grid-template-columns:1fr}}
 
@@ -388,7 +461,7 @@
   /* KEYFRAMES custom */
   @keyframes breath{0%,100%{transform:scale(1)}50%{transform:scale(1.015)}}
   @keyframes haloSpin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
-  @keyframes ringPulse{0%,100%{box-shadow:0 0 0 0 rgba(201,169,89,.35)}50%{box-shadow:0 0 0 14px rgba(201,169,89,0)}}
+  @keyframes ringPulse{0%,100%{box-shadow:0 0 0 0 rgba(212,175,55,.35)}50%{box-shadow:0 0 0 14px rgba(212,175,55,0)}}
   @keyframes starPop{from{opacity:0;transform:scale(.2) rotate(-30deg)}to{opacity:1;transform:scale(1) rotate(0)}}
   @keyframes heroShineSweep{0%{transform:translateX(-120%) skewX(-18deg)}100%{transform:translateX(320%) skewX(-18deg)}}
 
@@ -401,7 +474,7 @@
   /* Halo dourado girando atrás do card do logo */
   .logo-frame::before{
     background-image:
-      linear-gradient(90deg, rgba(201,169,89,.12) 0%, rgba(201,169,89,.0) 100%),
+      linear-gradient(90deg, rgba(212,175,55,.12) 0%, rgba(212,175,55,.0) 100%),
       repeating-linear-gradient(0deg, transparent 0 9px, rgba(255,255,255,.02) 9px 10px);
   }
 
@@ -436,7 +509,7 @@
   .hero-live{display:inline-flex;align-items:center;gap:9px;padding:8px 16px;background:rgba(37,211,102,.15);border:1px solid rgba(37,211,102,.35);border-radius:100px;font-size:13px;font-weight:600;color:#eaffe9;margin-bottom:16px;margin-top:8px;letter-spacing:.01em}
   .hero-live::before{content:"";width:9px;height:9px;border-radius:50%;background:#25d366;animation:ringPulse 2s ease-in-out infinite}
   .hero-live.off{background:rgba(138,149,160,.18);border-color:rgba(138,149,160,.35);color:#c2cbd6}
-  .hero-live.off::before{background:#8a95a0;animation:none}
+  .hero-live.off::before{background:#8692a4;animation:none}
 
   /* Shead ornamento (flourish) */
   .shead-flourish{display:flex;align-items:center;justify-content:center;gap:14px;margin:0 auto 24px;max-width:220px;color:var(--gold)}
@@ -446,7 +519,7 @@
 
   /* Areas hover tilt */
   .area{transform-style:preserve-3d;will-change:transform}
-  .area:hover{transform:translateY(-6px) rotateX(2deg) rotateY(-2deg);box-shadow:0 28px 50px rgba(20,41,74,.18)}
+  .area:hover{transform:translateY(-6px) rotateX(2deg) rotateY(-2deg);box-shadow:0 28px 50px rgba(8,23,41,.18)}
 
   /* STEPS timeline progress */
   .steps{position:relative}
@@ -476,15 +549,15 @@
   .gcard{transform:translateY(0);transition:transform .3s cubic-bezier(.22,.8,.24,1),box-shadow .3s,border-color .25s}
   .gcard:nth-child(odd){transform:translateY(0)}
   .gcard:nth-child(even){transform:translateY(14px)}
-  .gcard:hover{transform:translateY(-6px) !important;box-shadow:0 24px 42px rgba(20,41,74,.15);border-color:var(--navy-2)}
+  .gcard:hover{transform:translateY(-6px) !important;box-shadow:0 24px 42px rgba(8,23,41,.15);border-color:var(--navy-2)}
   .gcard-avatar{box-shadow:0 0 0 2px transparent,0 0 0 4px var(--silver-200);transition:box-shadow .3s}
   .gcard:hover .gcard-avatar{box-shadow:0 0 0 2px transparent,0 0 0 4px var(--star)}
   @media(max-width:980px){.gcards{grid-template-columns:1fr}.gcard:nth-child(even){transform:translateY(0)}}
 
   /* FAQ search */
   .faq-search{max-width:560px;margin:0 auto 28px;position:relative}
-  .faq-search input{width:100%;padding:14px 20px 14px 48px;background:#fff;border:1.5px solid var(--line);border-radius:100px;font-family:inherit;font-size:15px;color:var(--ink);outline:none;transition:all .2s;box-shadow:0 4px 14px rgba(20,41,74,.04)}
-  .faq-search input:focus{border-color:var(--navy-2);box-shadow:0 6px 18px rgba(20,41,74,.08)}
+  .faq-search input{width:100%;padding:14px 20px 14px 48px;background:#fff;border:1.5px solid var(--line);border-radius:100px;font-family:inherit;font-size:15px;color:var(--ink);outline:none;transition:all .2s;box-shadow:0 4px 14px rgba(8,23,41,.04)}
+  .faq-search input:focus{border-color:var(--navy-2);box-shadow:0 6px 18px rgba(8,23,41,.08)}
   .faq-search svg{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:20px;height:20px;color:var(--navy-2);pointer-events:none}
   .q.hidden{display:none}
 
@@ -492,25 +565,25 @@
   .cta-band{position:relative}
   .cta-band::after{
     content:"";position:absolute;inset:0;
-    background:radial-gradient(circle 700px at var(--mx,50%) var(--my,50%), rgba(201,169,89,.18), transparent 60%);
+    background:radial-gradient(circle 700px at var(--mx,50%) var(--my,50%), rgba(212,175,55,.18), transparent 60%);
     pointer-events:none;z-index:0;transition:background .4s;
   }
   .cta-inner{position:relative;z-index:2}
   .cta-inner h2{background:linear-gradient(90deg,#fff 0%,#fff 30%,var(--gold) 50%,#fff 70%,#fff 100%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:vs-textShine 7s linear infinite}
   .cta-inner h2 em{color:var(--gold);-webkit-text-fill-color:var(--gold);font-style:italic}
   .cta-floaters{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden}
-  .cta-floaters span{position:absolute;font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:clamp(80px,12vw,160px);color:rgba(201,169,89,.06);white-space:nowrap;user-select:none}
+  .cta-floaters span{position:absolute;font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:clamp(80px,12vw,160px);color:rgba(212,175,55,.06);white-space:nowrap;user-select:none}
   .cta-floaters span:nth-child(1){top:-20px;left:-40px;transform:rotate(-8deg)}
   .cta-floaters span:nth-child(2){bottom:-30px;right:-30px;transform:rotate(6deg)}
 
   /* DIAGNÓSTICO INTERATIVO */
   .diagnostic{padding:96px 0;background:linear-gradient(180deg,var(--cream-2) 0%,var(--cream) 100%);position:relative;overflow:hidden}
   .diagnostic-wrap{max-width:760px;margin:0 auto;padding:0 32px;text-align:center;position:relative;z-index:1}
-  .diagnostic-eye{display:inline-block;font-size:12px;letter-spacing:.22em;color:var(--navy-2);text-transform:uppercase;font-weight:700;margin-bottom:14px;padding:6px 14px;background:rgba(30,58,95,.1);border-radius:100px}
+  .diagnostic-eye{display:inline-block;font-size:12px;letter-spacing:.22em;color:var(--navy-2);text-transform:uppercase;font-weight:700;margin-bottom:14px;padding:6px 14px;background:rgba(12,30,58,.1);border-radius:100px}
   .diagnostic h2{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(30px,4.5vw,48px);line-height:1.1;color:var(--ink);margin-bottom:16px;letter-spacing:-.015em}
   .diagnostic h2 em{font-style:italic;color:var(--navy-2)}
   .diagnostic .lead{font-size:17px;color:var(--gray);max-width:52ch;margin:0 auto 40px;line-height:1.65}
-  .quiz{background:#fff;border:1px solid var(--line);border-radius:22px;padding:40px 36px;box-shadow:0 24px 60px rgba(20,41,74,.08);text-align:left;position:relative;overflow:hidden;min-height:380px}
+  .quiz{background:#fff;border:1px solid var(--line);border-radius:22px;padding:40px 36px;box-shadow:0 24px 60px rgba(8,23,41,.08);text-align:left;position:relative;overflow:hidden;min-height:380px}
   .quiz-progress{position:absolute;top:0;left:0;right:0;height:4px;background:var(--cream-2)}
   .quiz-progress::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--navy-2),var(--gold));transform-origin:left;transform:scaleX(var(--qp,.33));transition:transform .5s cubic-bezier(.22,.8,.24,1)}
   .quiz-step{display:none;animation:vs-fadeUp .5s cubic-bezier(.22,.8,.24,1)}
@@ -519,7 +592,7 @@
   .quiz-step h3{font-family:'Playfair Display',serif;font-size:26px;font-weight:600;color:var(--ink);margin-bottom:24px;line-height:1.25;letter-spacing:-.01em}
   .quiz-opts{display:grid;gap:12px}
   .quiz-opt{display:flex;align-items:center;gap:14px;padding:18px 22px;background:var(--cream);border:1.5px solid var(--line);border-radius:14px;cursor:pointer;transition:all .25s;text-align:left;font-family:inherit;font-size:15px;font-weight:500;color:var(--ink-soft);width:100%;position:relative}
-  .quiz-opt:hover{border-color:var(--navy-2);background:#fff;transform:translateY(-2px);box-shadow:0 10px 24px rgba(20,41,74,.08)}
+  .quiz-opt:hover{border-color:var(--navy-2);background:#fff;transform:translateY(-2px);box-shadow:0 10px 24px rgba(8,23,41,.08)}
   .quiz-opt-ico{width:36px;height:36px;border-radius:10px;background:var(--cream-2);color:var(--navy-2);display:grid;place-items:center;flex-shrink:0;transition:all .25s}
   .quiz-opt:hover .quiz-opt-ico{background:var(--navy-2);color:#fff}
   .quiz-opt svg{width:18px;height:18px}
@@ -541,8 +614,8 @@
   /* Topbar live dot */
   .topbar-live{display:inline-flex;align-items:center;gap:6px;color:#a7e8a8}
   .topbar-live::before{content:"";width:7px;height:7px;border-radius:50%;background:#25d366;animation:ringPulse 2s ease-in-out infinite}
-  .topbar-live.off{color:#8a95a0}
-  .topbar-live.off::before{background:#6b7380;animation:none}
+  .topbar-live.off{color:#8692a4}
+  .topbar-live.off::before{background:#5c6878;animation:none}
 
   /* Drop cap sutil no about */
   .about-body p:first-of-type::first-letter{font-family:'Playfair Display',serif;font-size:4em;float:left;line-height:.88;padding:6px 14px 0 0;color:var(--navy-2);font-weight:600}
@@ -564,7 +637,7 @@
     .hero-rating-stars svg{animation:none;opacity:1}
     .cta-inner h2{animation:none;-webkit-text-fill-color:#fff;color:#fff;background:none}
     .hero-cta::before,.banner-cta::before,.form-btn::before,.nav-cta::before{display:none}
-    .hero-video video{display:none}
+    .herald-stars svg{animation:none}
   }
 
   /* =================================================================
@@ -622,10 +695,12 @@
     .pstat{padding:10px 14px;min-width:88px}
     .pstat-num{font-size:18px}
     .pstat-lbl{font-size:10px;margin-top:4px}
-    .hero-video video{opacity:.4}
+    .herald-corner{width:60px;height:60px}
+    .herald-stars svg{transform:scale(.8)}
+    .herald-frame{top:14px;left:14px;right:14px;bottom:80px}
 
-    /* CLIENT BANNER horizontal mais contido */
-    .client-banner-img{max-height:130px}
+    /* CLIENT BANNER — deixa proporção natural */
+    .client-banner-img{max-height:none}
 
     /* QUOTE */
     .quote-band{padding:48px 0 12px}
@@ -777,7 +852,7 @@
     .pstat-num{font-size:15.5px}
     .pstat-lbl{font-size:9.5px}
     .shead h2,.banner h2,.cta-inner h2,.diagnostic h2{font-size:24px}
-    .client-banner-img{max-height:100px}
+    .client-banner-img{max-height:none}
     .section{padding:56px 0}
     .area h3{font-size:18px}
     .about-photo{max-width:240px}
@@ -806,7 +881,7 @@
       </span>
       <span class="topbar-live" data-live data-live-on="Dr. Breno está online agora" data-live-off="Retorno em até 2h úteis"><span data-live-text>Dr. Breno está online agora</span></span>
       <span style="color:#b4c2d6">Cabo de Santo Agostinho/PE · Recife · atendimento online em todo Brasil</span>
-      <span style="color:#c9a959;font-weight:600;letter-spacing:.08em;display:inline-flex;align-items:center;gap:6px">
+      <span style="color:#d4af37;font-weight:600;letter-spacing:.08em;display:inline-flex;align-items:center;gap:6px">
         <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2L2 12l10 10 10-10L12 2zm0 3.5L18.5 12 12 18.5 5.5 12 12 5.5z"/></svg>
         Aceita Pix
       </span>
@@ -846,11 +921,68 @@
 </nav>
 
 <header class="hero" data-dust="14">
-  <div class="hero-video" aria-hidden="true">
-    <video autoplay muted loop playsinline preload="metadata" poster="assets/banner.jpg">
-      <source src="assets/hero-video.mp4" type="video/mp4" />
-    </video>
+  <!-- Raios de luz dourada radiais -->
+  <div class="herald-rays" aria-hidden="true"></div>
+
+  <!-- Moldura dupla dourada -->
+  <div class="herald-frame" aria-hidden="true"></div>
+
+  <!-- Ornamentos nos 4 cantos (filigrana heráldica + estrela) -->
+  <div class="herald-corner tl" aria-hidden="true">
+    <svg viewBox="0 0 90 90">
+      <path d="M 4 30 Q 4 4 30 4 L 86 4" stroke-linecap="round"/>
+      <path d="M 4 30 L 4 86" stroke-linecap="round"/>
+      <path d="M 10 22 Q 18 14 22 22 Q 18 26 14 24" stroke-linecap="round"/>
+      <path d="M 22 10 Q 30 14 26 22 Q 22 20 20 16" stroke-linecap="round"/>
+      <path class="corner-star" d="M 45 12 L 47 18 L 53 20 L 47 22 L 45 28 L 43 22 L 37 20 L 43 18 Z"/>
+      <path class="corner-star" d="M 12 45 L 14 51 L 20 53 L 14 55 L 12 61 L 10 55 L 4 53 L 10 51 Z"/>
+    </svg>
   </div>
+  <div class="herald-corner tr" aria-hidden="true">
+    <svg viewBox="0 0 90 90">
+      <path d="M 4 30 Q 4 4 30 4 L 86 4" stroke-linecap="round"/>
+      <path d="M 4 30 L 4 86" stroke-linecap="round"/>
+      <path d="M 10 22 Q 18 14 22 22 Q 18 26 14 24" stroke-linecap="round"/>
+      <path d="M 22 10 Q 30 14 26 22 Q 22 20 20 16" stroke-linecap="round"/>
+      <path class="corner-star" d="M 45 12 L 47 18 L 53 20 L 47 22 L 45 28 L 43 22 L 37 20 L 43 18 Z"/>
+      <path class="corner-star" d="M 12 45 L 14 51 L 20 53 L 14 55 L 12 61 L 10 55 L 4 53 L 10 51 Z"/>
+    </svg>
+  </div>
+  <div class="herald-corner bl" aria-hidden="true">
+    <svg viewBox="0 0 90 90">
+      <path d="M 4 30 Q 4 4 30 4 L 86 4" stroke-linecap="round"/>
+      <path d="M 4 30 L 4 86" stroke-linecap="round"/>
+      <path d="M 10 22 Q 18 14 22 22 Q 18 26 14 24" stroke-linecap="round"/>
+      <path d="M 22 10 Q 30 14 26 22 Q 22 20 20 16" stroke-linecap="round"/>
+      <path class="corner-star" d="M 45 12 L 47 18 L 53 20 L 47 22 L 45 28 L 43 22 L 37 20 L 43 18 Z"/>
+      <path class="corner-star" d="M 12 45 L 14 51 L 20 53 L 14 55 L 12 61 L 10 55 L 4 53 L 10 51 Z"/>
+    </svg>
+  </div>
+  <div class="herald-corner br" aria-hidden="true">
+    <svg viewBox="0 0 90 90">
+      <path d="M 4 30 Q 4 4 30 4 L 86 4" stroke-linecap="round"/>
+      <path d="M 4 30 L 4 86" stroke-linecap="round"/>
+      <path d="M 10 22 Q 18 14 22 22 Q 18 26 14 24" stroke-linecap="round"/>
+      <path d="M 22 10 Q 30 14 26 22 Q 22 20 20 16" stroke-linecap="round"/>
+      <path class="corner-star" d="M 45 12 L 47 18 L 53 20 L 47 22 L 45 28 L 43 22 L 37 20 L 43 18 Z"/>
+      <path class="corner-star" d="M 12 45 L 14 51 L 20 53 L 14 55 L 12 61 L 10 55 L 4 53 L 10 51 Z"/>
+    </svg>
+  </div>
+
+  <!-- Constelação de estrelas flutuantes -->
+  <div class="herald-stars" aria-hidden="true">
+    <svg class="star-1" viewBox="0 0 20 20"><path d="M 10 0 L 12 8 L 20 10 L 12 12 L 10 20 L 8 12 L 0 10 L 8 8 Z"/></svg>
+    <svg class="star-2" viewBox="0 0 20 20"><path d="M 10 0 L 12 8 L 20 10 L 12 12 L 10 20 L 8 12 L 0 10 L 8 8 Z"/></svg>
+    <svg class="star-3" viewBox="0 0 20 20"><path d="M 10 0 L 12 8 L 20 10 L 12 12 L 10 20 L 8 12 L 0 10 L 8 8 Z"/></svg>
+    <svg class="star-4" viewBox="0 0 20 20"><path d="M 10 0 L 12 8 L 20 10 L 12 12 L 10 20 L 8 12 L 0 10 L 8 8 Z"/></svg>
+    <svg class="star-5" viewBox="0 0 20 20"><path d="M 10 0 L 12 8 L 20 10 L 12 12 L 10 20 L 8 12 L 0 10 L 8 8 Z"/></svg>
+    <svg class="star-6" viewBox="0 0 20 20"><path d="M 10 0 L 12 8 L 20 10 L 12 12 L 10 20 L 8 12 L 0 10 L 8 8 Z"/></svg>
+    <svg class="star-7" viewBox="0 0 20 20"><path d="M 10 0 L 12 8 L 20 10 L 12 12 L 10 20 L 8 12 L 0 10 L 8 8 Z"/></svg>
+    <svg class="star-8" viewBox="0 0 20 20"><path d="M 10 0 L 12 8 L 20 10 L 12 12 L 10 20 L 8 12 L 0 10 L 8 8 Z"/></svg>
+    <svg class="star-9" viewBox="0 0 20 20"><path d="M 10 0 L 12 8 L 20 10 L 12 12 L 10 20 L 8 12 L 0 10 L 8 8 Z"/></svg>
+    <svg class="star-10" viewBox="0 0 20 20"><path d="M 10 0 L 12 8 L 20 10 L 12 12 L 10 20 L 8 12 L 0 10 L 8 8 Z"/></svg>
+  </div>
+
   <div class="wrap">
     <div class="hero-grid">
       <div>
@@ -922,7 +1054,7 @@
           <defs>
             <linearGradient id="brass" x1="0" y1="0" x2="1" y2="1">
               <stop offset="0" stop-color="#d4c08e"/>
-              <stop offset=".5" stop-color="#a78841"/>
+              <stop offset=".5" stop-color="#a88632"/>
               <stop offset="1" stop-color="#7a6330"/>
             </linearGradient>
             <linearGradient id="brass2" x1="0" y1="0" x2="0" y2="1">
@@ -930,8 +1062,8 @@
               <stop offset="1" stop-color="#95773a"/>
             </linearGradient>
             <linearGradient id="book" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#2a4a73"/>
-              <stop offset="1" stop-color="#14294a"/>
+              <stop offset="0" stop-color="#1e3a66"/>
+              <stop offset="1" stop-color="#081729"/>
             </linearGradient>
           </defs>
           <!-- Balança da justiça -->
@@ -959,10 +1091,10 @@
           <!-- Livro de códigos sobre prato esquerdo -->
           <g transform="translate(70, 218) rotate(-4)">
             <rect x="0" y="8" width="64" height="38" rx="2" fill="url(#book)"/>
-            <rect x="0" y="8" width="64" height="5" fill="#0c1d37"/>
-            <line x1="8" y1="22" x2="56" y2="22" stroke="#c9a959" stroke-width=".8"/>
-            <line x1="8" y1="28" x2="56" y2="28" stroke="#c9a959" stroke-width=".6" opacity=".7"/>
-            <text x="32" y="20" text-anchor="middle" fill="#c9a959" font-family="Playfair Display, serif" font-size="5" font-weight="700" letter-spacing=".3">CÓDIGO CIVIL</text>
+            <rect x="0" y="8" width="64" height="5" fill="#050f1f"/>
+            <line x1="8" y1="22" x2="56" y2="22" stroke="#d4af37" stroke-width=".8"/>
+            <line x1="8" y1="28" x2="56" y2="28" stroke="#d4af37" stroke-width=".6" opacity=".7"/>
+            <text x="32" y="20" text-anchor="middle" fill="#d4af37" font-family="Playfair Display, serif" font-size="5" font-weight="700" letter-spacing=".3">CÓDIGO CIVIL</text>
           </g>
           <!-- Martelo de juiz sobre prato direito -->
           <g transform="translate(360, 215) rotate(12)">
@@ -1421,6 +1553,61 @@
     <span>Justiça</span>
     <span>Direitos</span>
   </div>
+
+  <!-- Raios dourados + moldura + ornamentos + constelação -->
+  <div class="herald-rays" aria-hidden="true"></div>
+  <div class="herald-frame" aria-hidden="true"></div>
+  <div class="herald-corner tl" aria-hidden="true">
+    <svg viewBox="0 0 90 90">
+      <path d="M 4 30 Q 4 4 30 4 L 86 4" stroke-linecap="round"/>
+      <path d="M 4 30 L 4 86" stroke-linecap="round"/>
+      <path d="M 10 22 Q 18 14 22 22 Q 18 26 14 24" stroke-linecap="round"/>
+      <path d="M 22 10 Q 30 14 26 22 Q 22 20 20 16" stroke-linecap="round"/>
+      <path class="corner-star" d="M 45 12 L 47 18 L 53 20 L 47 22 L 45 28 L 43 22 L 37 20 L 43 18 Z"/>
+      <path class="corner-star" d="M 12 45 L 14 51 L 20 53 L 14 55 L 12 61 L 10 55 L 4 53 L 10 51 Z"/>
+    </svg>
+  </div>
+  <div class="herald-corner tr" aria-hidden="true">
+    <svg viewBox="0 0 90 90">
+      <path d="M 4 30 Q 4 4 30 4 L 86 4" stroke-linecap="round"/>
+      <path d="M 4 30 L 4 86" stroke-linecap="round"/>
+      <path d="M 10 22 Q 18 14 22 22 Q 18 26 14 24" stroke-linecap="round"/>
+      <path d="M 22 10 Q 30 14 26 22 Q 22 20 20 16" stroke-linecap="round"/>
+      <path class="corner-star" d="M 45 12 L 47 18 L 53 20 L 47 22 L 45 28 L 43 22 L 37 20 L 43 18 Z"/>
+      <path class="corner-star" d="M 12 45 L 14 51 L 20 53 L 14 55 L 12 61 L 10 55 L 4 53 L 10 51 Z"/>
+    </svg>
+  </div>
+  <div class="herald-corner bl" aria-hidden="true">
+    <svg viewBox="0 0 90 90">
+      <path d="M 4 30 Q 4 4 30 4 L 86 4" stroke-linecap="round"/>
+      <path d="M 4 30 L 4 86" stroke-linecap="round"/>
+      <path d="M 10 22 Q 18 14 22 22 Q 18 26 14 24" stroke-linecap="round"/>
+      <path d="M 22 10 Q 30 14 26 22 Q 22 20 20 16" stroke-linecap="round"/>
+      <path class="corner-star" d="M 45 12 L 47 18 L 53 20 L 47 22 L 45 28 L 43 22 L 37 20 L 43 18 Z"/>
+      <path class="corner-star" d="M 12 45 L 14 51 L 20 53 L 14 55 L 12 61 L 10 55 L 4 53 L 10 51 Z"/>
+    </svg>
+  </div>
+  <div class="herald-corner br" aria-hidden="true">
+    <svg viewBox="0 0 90 90">
+      <path d="M 4 30 Q 4 4 30 4 L 86 4" stroke-linecap="round"/>
+      <path d="M 4 30 L 4 86" stroke-linecap="round"/>
+      <path d="M 10 22 Q 18 14 22 22 Q 18 26 14 24" stroke-linecap="round"/>
+      <path d="M 22 10 Q 30 14 26 22 Q 22 20 20 16" stroke-linecap="round"/>
+      <path class="corner-star" d="M 45 12 L 47 18 L 53 20 L 47 22 L 45 28 L 43 22 L 37 20 L 43 18 Z"/>
+      <path class="corner-star" d="M 12 45 L 14 51 L 20 53 L 14 55 L 12 61 L 10 55 L 4 53 L 10 51 Z"/>
+    </svg>
+  </div>
+  <div class="herald-stars" aria-hidden="true">
+    <svg class="star-1" viewBox="0 0 20 20"><path d="M 10 0 L 12 8 L 20 10 L 12 12 L 10 20 L 8 12 L 0 10 L 8 8 Z"/></svg>
+    <svg class="star-2" viewBox="0 0 20 20"><path d="M 10 0 L 12 8 L 20 10 L 12 12 L 10 20 L 8 12 L 0 10 L 8 8 Z"/></svg>
+    <svg class="star-3" viewBox="0 0 20 20"><path d="M 10 0 L 12 8 L 20 10 L 12 12 L 10 20 L 8 12 L 0 10 L 8 8 Z"/></svg>
+    <svg class="star-4" viewBox="0 0 20 20"><path d="M 10 0 L 12 8 L 20 10 L 12 12 L 10 20 L 8 12 L 0 10 L 8 8 Z"/></svg>
+    <svg class="star-5" viewBox="0 0 20 20"><path d="M 10 0 L 12 8 L 20 10 L 12 12 L 10 20 L 8 12 L 0 10 L 8 8 Z"/></svg>
+    <svg class="star-6" viewBox="0 0 20 20"><path d="M 10 0 L 12 8 L 20 10 L 12 12 L 10 20 L 8 12 L 0 10 L 8 8 Z"/></svg>
+    <svg class="star-7" viewBox="0 0 20 20"><path d="M 10 0 L 12 8 L 20 10 L 12 12 L 10 20 L 8 12 L 0 10 L 8 8 Z"/></svg>
+    <svg class="star-8" viewBox="0 0 20 20"><path d="M 10 0 L 12 8 L 20 10 L 12 12 L 10 20 L 8 12 L 0 10 L 8 8 Z"/></svg>
+  </div>
+
   <div class="wrap">
     <div class="cta-inner" data-reveal="up">
       <h2>Ainda em dúvida? Conte seu caso <em>sem compromisso</em>.</h2>
