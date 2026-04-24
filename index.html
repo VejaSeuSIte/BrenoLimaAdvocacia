@@ -23,8 +23,9 @@
 <meta name="twitter:title" content="Breno Lima Advocacia · Cível, Previdenciário, Trabalhista e Sucessões" />
 <meta name="twitter:description" content="Atendimento direto, sem intermediário. Análise inicial gratuita pelo WhatsApp. Cabo de Santo Agostinho/PE, Recife e online em todo Brasil." />
 <meta name="twitter:image" content="https://vejaseusite.github.io/BrenoLimaAdvocacia/assets/og-image.jpg" />
-<link rel="icon" type="image/png" href="assets/logo.png" />
-<link rel="preload" as="image" href="assets/logo.png" fetchpriority="high" />
+<link rel="icon" type="image/png" href="assets/seal.png" />
+<link rel="preload" as="image" href="assets/seal.png" fetchpriority="high" />
+<link rel="preload" as="image" href="assets/wordmark-gold.svg" fetchpriority="high" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
@@ -194,13 +195,42 @@
   .hero-rating-text{font-size:14px;color:#cbd5e4;line-height:1.45}
   .hero-rating-text strong{color:#fff;font-weight:700}
 
-  /* HERO LOGO CARD — adaptado para brasão circular heráldico */
-  .logo-wrap{position:relative;height:100%;display:flex;align-items:center;justify-content:center;min-height:520px}
-  .logo-frame{position:relative;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle at center,rgba(212,175,55,.12) 0%,transparent 70%);display:flex;align-items:center;justify-content:center;box-shadow:none;border:none}
-  .logo-frame::before{content:"";position:absolute;inset:-40px;border-radius:50%;background:radial-gradient(circle at center,rgba(212,175,55,.22) 0%,transparent 60%);pointer-events:none;z-index:0}
-  .logo-frame::after{content:"";position:absolute;inset:-12px;border-radius:50%;border:1px dashed rgba(212,175,55,.3);pointer-events:none;z-index:1}
-  .logo-frame .logo-big{width:100%;height:auto;position:relative;z-index:2;filter:drop-shadow(0 20px 40px rgba(0,0,0,.5)) drop-shadow(0 0 30px rgba(212,175,55,.15))}
-  .logo-badge{display:none}
+  /* HERO LOGO HORIZONTAL — selo + wordmark lado a lado, grande, no topo */
+  .hero-logo{
+    display:flex;align-items:center;justify-content:center;gap:44px;
+    padding:72px 0 40px;position:relative;
+  }
+  .hero-seal{
+    width:230px;height:auto;flex-shrink:0;
+    filter:drop-shadow(0 16px 36px rgba(0,0,0,.35)) drop-shadow(0 0 28px rgba(212,175,55,.2));
+  }
+  .hero-logo-divider{
+    width:1px;height:180px;flex-shrink:0;
+    background:linear-gradient(180deg,transparent,#d4af37,transparent);
+    opacity:.55;
+  }
+  .hero-wordmark{
+    max-width:560px;width:100%;height:auto;
+  }
+
+  /* Conteúdo centralizado abaixo da logo */
+  .hero-content{
+    max-width:780px;margin:0 auto;text-align:center;
+    padding-bottom:140px;
+  }
+  .hero-content .hero-eye{
+    justify-content:center;margin-top:20px;margin-bottom:24px;
+  }
+  .hero-content .hero-eye::after{
+    content:"";width:40px;height:1px;background:currentColor;
+  }
+  .hero-content h1{max-width:22ch;margin-left:auto;margin-right:auto}
+  .hero-content .hero-sub{margin-left:auto;margin-right:auto}
+  .hero-content .hero-online{margin-left:auto;margin-right:auto;text-align:center}
+  .hero-content .hero-rating{justify-content:center}
+
+  /* Estilos antigos do logo-frame (mantidos temporariamente por outras seções) */
+  .logo-wrap,.logo-frame,.logo-badge{display:none}
   .logo-stats{position:absolute;bottom:-20px;right:-20px;z-index:3;display:flex;gap:2px;border-radius:14px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4)}
   .pstat{padding:18px 24px;text-align:center;min-width:124px}
   .pstat.a{background:var(--platinum);color:var(--navy-3)}
@@ -210,13 +240,11 @@
 
   @media(max-width:1020px){
     .hero{padding:40px 0 0}
-    .hero-grid{grid-template-columns:1fr;gap:32px;padding-bottom:80px}
-    .hero-eye{margin-top:24px}
-    .logo-wrap{min-height:440px;margin:0 auto;max-width:440px}
-    .logo-frame{width:min(100%,360px);height:400px}
-    .logo-stats{bottom:-10px;right:0}
-    .pstat{padding:14px 20px;min-width:104px}
-    .pstat-num{font-size:22px}
+    .hero-logo{gap:32px;padding:48px 0 32px}
+    .hero-seal{width:200px}
+    .hero-logo-divider{height:150px}
+    .hero-wordmark{max-width:480px}
+    .hero-content{padding-bottom:100px}
   }
   @media(max-width:540px){
     .hero::after{height:60px}
@@ -290,9 +318,10 @@
   .about-grid{display:grid;grid-template-columns:380px 1fr;gap:72px;align-items:center}
   .about-photo{aspect-ratio:4/5;background:linear-gradient(160deg,var(--navy-1),var(--navy-3));border-radius:8px 8px 8px 80px;display:flex;align-items:flex-end;justify-content:center;position:relative;overflow:hidden;padding:40px}
   .about-photo::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0L0 20l20 20 20-20z' fill='none' stroke='rgba(255,255,255,.08)' stroke-width='.8'/%3E%3C/svg%3E");background-size:40px 40px;opacity:.9}
-  .about-photo-inner{position:relative;z-index:1;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding:40px 20px}
-  .about-photo-inner img{width:85%;max-width:280px;filter:drop-shadow(0 20px 30px rgba(0,0,0,.45)) drop-shadow(0 0 24px rgba(212,175,55,.18));background:transparent;padding:0;border-radius:0}
-  .about-photo-monogram{font-family:'Playfair Display',serif;font-style:italic;font-size:11px;letter-spacing:.4em;color:var(--gold);text-align:center;text-transform:uppercase;padding-top:16px;border-top:1px solid rgba(212,175,55,.3);width:70%}
+  .about-photo-inner{position:relative;z-index:1;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:40px 24px}
+  .about-seal{width:70%;max-width:220px;filter:drop-shadow(0 16px 30px rgba(0,0,0,.45)) drop-shadow(0 0 24px rgba(212,175,55,.18));background:transparent}
+  .about-wordmark{width:90%;max-width:260px}
+  .about-photo-inner::after{content:"";display:block;width:80px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.6;margin-top:-6px}
   .about-body h3{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(28px,3.5vw,40px);line-height:1.1;color:var(--ink);margin-bottom:20px;letter-spacing:-.01em}
   .about-body h3 em{font-style:italic;color:var(--navy-2)}
   .about-body p{font-size:16px;color:var(--gray);line-height:1.75;margin-bottom:18px;max-width:60ch}
@@ -430,11 +459,9 @@
   /* FOOTER */
   .foot{background:var(--navy-4);color:#c2cbd6;padding:64px 0 24px}
   .foot-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;padding-bottom:32px;border-bottom:1px solid rgba(212,175,55,.15)}
-  .foot-brand .brand{color:#fff;margin-bottom:16px;gap:14px;align-items:center}
-  .foot-brand .brand-text{display:flex}
-  .foot-brand .brand-name{color:#fff;font-family:'Playfair Display',serif;font-size:22px;font-weight:600;line-height:1}
-  .foot-brand .brand-tag{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.28em;margin-top:5px;text-transform:uppercase;font-weight:600}
-  .foot-brand .brand-logo-img{background:transparent;border-radius:0;padding:0;width:72px;height:72px;max-height:72px;filter:drop-shadow(0 4px 12px rgba(212,175,55,.2))}
+  .foot-brand-logo{display:flex;align-items:center;gap:16px;margin-bottom:18px;color:#fff}
+  .foot-seal{width:68px;height:auto;flex-shrink:0;filter:drop-shadow(0 4px 12px rgba(212,175,55,.25))}
+  .foot-wordmark{max-width:260px;width:100%;height:auto}
   .foot-brand p{font-size:14px;line-height:1.65;max-width:34ch}
   .foot h5{color:#fff;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px;font-weight:700}
   .foot ul{list-style:none;display:grid;gap:10px}
@@ -503,7 +530,7 @@
   .hero-online{animation:vs-fadeUp .9s cubic-bezier(.22,.8,.24,1) .44s both}
   .hero-cta{animation:vs-fadeUp .9s cubic-bezier(.22,.8,.24,1) .56s both}
   .hero-rating{animation:vs-fadeUp .9s cubic-bezier(.22,.8,.24,1) .68s both}
-  .logo-wrap{animation:vs-fadeScale .55s cubic-bezier(.22,.8,.24,1) 0s both}
+  .hero-logo{animation:vs-fadeScale .55s cubic-bezier(.22,.8,.24,1) 0s both}
   .logo-stats{animation:vs-fadeRight .9s cubic-bezier(.22,.8,.24,1) 1.4s both}
 
   /* Live-dot badge */
@@ -645,13 +672,17 @@
      MOBILE TUNING — refinamento completo para telas pequenas
      ================================================================= */
   @media(max-width:980px){
-    .hero-grid{grid-template-columns:1fr;gap:28px;padding-bottom:64px}
+    /* Logo horizontal vira vertical em tablets: selo em cima, divider horizontal, wordmark embaixo */
+    .hero-logo{flex-direction:column;gap:18px;padding:40px 0 24px}
+    .hero-seal{width:220px}
+    .hero-logo-divider{
+      width:120px;height:1px;
+      background:linear-gradient(90deg,transparent,#d4af37,transparent);
+    }
+    .hero-wordmark{max-width:440px}
+    .hero-content{padding-bottom:80px}
     .hero-eye{margin-top:16px}
     .hero h1{max-width:100%}
-    .logo-wrap{min-height:auto;max-width:380px;margin:0 auto;padding:16px 0}
-    .logo-frame{width:100%;height:auto;aspect-ratio:1/1}
-    .logo-frame .logo-big{width:100%}
-    .logo-stats{bottom:-14px;right:0}
   }
 
   @media(max-width:640px){
@@ -673,7 +704,11 @@
 
     /* HERO compacto e bonito */
     .hero{padding:28px 0 0}
-    .hero-grid{gap:28px;padding-bottom:54px}
+    .hero-logo{gap:14px;padding:24px 0 18px}
+    .hero-seal{width:180px}
+    .hero-logo-divider{width:90px}
+    .hero-wordmark{max-width:320px}
+    .hero-content{padding-bottom:54px}
     .hero-eye{margin-top:8px;font-size:11px;letter-spacing:.18em;gap:10px;margin-bottom:16px}
     .hero-eye::before{width:28px}
     .hero h1{font-size:clamp(28px,7.8vw,38px);margin-bottom:18px;line-height:1.15;letter-spacing:-.01em}
@@ -687,16 +722,8 @@
     .hero-rating-stars svg{width:16px;height:16px}
     .hero-rating-text{font-size:13px;flex:1;min-width:140px}
 
-    /* LOGO FRAME mobile — circular e proporcional */
-    .logo-wrap{min-height:auto;max-width:300px;padding:8px 0}
-    .logo-frame{height:auto;width:100%;aspect-ratio:1/1}
-    .logo-frame .logo-big{width:100%}
-    .logo-frame::before{inset:-20px}
-    .logo-frame::after{inset:-8px}
-    .logo-stats{bottom:-10px;right:0;left:auto;transform:none;flex-direction:row;box-shadow:0 14px 28px rgba(0,0,0,.35)}
-    .pstat{padding:10px 14px;min-width:88px}
-    .pstat-num{font-size:18px}
-    .pstat-lbl{font-size:10px;margin-top:4px}
+    /* Hero logo compacto pra mobile */
+    .hero-eye::after{width:28px}
 
     /* Ornamentos heráldicos: ocultos no mobile pra não poluir
        — mantém só fundo (gradient + pattern de estrelas + rays) */
@@ -746,8 +773,9 @@
     /* ABOUT */
     .about-grid{gap:32px}
     .about-photo{max-width:280px;padding:20px;border-radius:6px 6px 6px 60px}
-    .about-photo-inner{padding:20px 12px;gap:14px}
-    .about-photo-inner img{width:72%;max-width:180px;padding:18px}
+    .about-photo-inner{padding:24px 14px;gap:14px}
+    .about-seal{width:60%;max-width:150px}
+    .about-wordmark{width:95%;max-width:220px}
     .about-body h3{font-size:26px;margin-bottom:16px}
     .about-body p{font-size:15px;line-height:1.65}
     .about-body p:first-of-type::first-letter{font-size:3em;padding-right:10px}
@@ -827,8 +855,8 @@
     /* FOOTER */
     .foot{padding:48px 0 20px}
     .foot-top{gap:28px;margin-bottom:28px;padding-bottom:24px}
-    .foot-brand .brand-logo-img{width:58px;height:58px;max-height:58px}
-    .foot-brand .brand-name{font-size:19px}
+    .foot-seal{width:56px}
+    .foot-wordmark{max-width:200px}
     .foot-brand p{font-size:13px;margin-top:12px}
     .foot-social{margin-top:14px}
     .foot h5{font-size:12px;margin-bottom:12px}
@@ -850,15 +878,9 @@
     .nav-cta{padding:8px 12px;font-size:10.5px}
     .nav-cta span,.nav-cta{letter-spacing:.01em}
     .hero h1{font-size:clamp(24px,8vw,32px)}
-    .logo-wrap{min-height:auto;max-width:260px;padding:4px 0}
-    .logo-frame{height:auto;width:100%;aspect-ratio:1/1}
-    .logo-frame .logo-big{width:100%}
-    .logo-frame::before{inset:-14px}
-    .logo-frame::after{inset:-6px}
-    .logo-stats{bottom:-6px}
-    .pstat{padding:8px 11px;min-width:78px}
-    .pstat-num{font-size:15.5px}
-    .pstat-lbl{font-size:9.5px}
+    .hero-seal{width:140px}
+    .hero-wordmark{max-width:280px}
+    .hero-logo-divider{width:70px}
     .shead h2,.banner h2,.cta-inner h2,.diagnostic h2{font-size:24px}
     .client-banner{min-height:180px}
     .client-banner-img{height:180px}
@@ -905,7 +927,7 @@
   <div class="nav-inner">
     <div class="nav-left">
       <a href="#" class="brand" aria-label="Breno Lima Advocacia — início">
-        <img class="brand-logo-img" src="assets/logo-cropped.png" alt="Breno Lima Advocacia" />
+        <img class="brand-logo-img" src="assets/seal.png" alt="Breno Lima Advocacia" />
       </a>
       <div class="nav-links" id="nav-links-menu">
       <a href="#" class="active">Início</a>
@@ -993,34 +1015,33 @@
   </div>
 
   <div class="wrap">
-    <div class="hero-grid">
-      <div>
-        <div class="hero-eye">Dr. Breno Lima · Advogado · OAB/PE</div>
-        <h1>Advocacia em <em>Direito Cível</em>, Previdenciário, Trabalhista e Sucessões.</h1>
-        <p class="hero-sub">Escritório dedicado a causas cíveis, previdenciárias, trabalhistas e de herança — com atendimento direto, sem intermediário, e análise inicial do seu caso sem custo.</p>
-        <div class="hero-live" data-live data-live-on="Atendendo no WhatsApp agora" data-live-off="Resposta em até 2h úteis"><span data-live-text>Atendendo no WhatsApp agora</span></div>
-        <div class="hero-online">Atendimento presencial em Cabo de Santo Agostinho/PE, Recife e região · online em todo Brasil</div>
-        <a href="https://wa.me/5581984089609?text=Ol%C3%A1%2C%20Dr.%20Breno.%20Gostaria%20de%20analisar%20meu%20caso." class="hero-cta">
-          <svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.49-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.88 1.22 3.08.15.2 2.1 3.21 5.1 4.5.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35z"/><path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 1.75.46 3.46 1.33 4.96L2 22l5.15-1.35c1.45.79 3.09 1.21 4.85 1.21 5.5 0 9.96-4.46 9.96-9.96S17.5 2.04 12 2.04z"/></svg>
-          Agendar consulta gratuita
-        </a>
-        <div class="hero-rating">
-          <div class="hero-rating-stars">
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <div class="hero-rating-text"><strong>Atendimento direto</strong></div>
-        </div>
-      </div>
+    <!-- Logo horizontal grande no topo (selo + wordmark) -->
+    <div class="hero-logo">
+      <img class="hero-seal" src="assets/seal.png" alt="Selo Breno Lima Advocacia" fetchpriority="high" decoding="async" />
+      <div class="hero-logo-divider" aria-hidden="true"></div>
+      <img class="hero-wordmark" src="assets/wordmark-gold.svg" alt="Breno Lima Advocacia" />
+    </div>
 
-      <div class="logo-wrap">
-        <div class="logo-frame">
-          <img class="logo-big" src="assets/logo.png" alt="Logotipo Breno Lima Advocacia" fetchpriority="high" decoding="async" />
-          <div class="logo-badge">Advocacia</div>
+    <!-- Conteúdo centralizado abaixo -->
+    <div class="hero-content">
+      <div class="hero-eye">Dr. Breno Lima · Advogado · OAB/PE</div>
+      <h1>Advocacia em <em>Direito Cível</em>, Previdenciário, Trabalhista e Sucessões.</h1>
+      <p class="hero-sub">Escritório dedicado a causas cíveis, previdenciárias, trabalhistas e de herança — com atendimento direto, sem intermediário, e análise inicial do seu caso sem custo.</p>
+      <div class="hero-live" data-live data-live-on="Atendendo no WhatsApp agora" data-live-off="Resposta em até 2h úteis"><span data-live-text>Atendendo no WhatsApp agora</span></div>
+      <div class="hero-online">Atendimento presencial em Cabo de Santo Agostinho/PE, Recife e região · online em todo Brasil</div>
+      <a href="https://wa.me/5581984089609?text=Ol%C3%A1%2C%20Dr.%20Breno.%20Gostaria%20de%20analisar%20meu%20caso." class="hero-cta">
+        <svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.49-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.88 1.22 3.08.15.2 2.1 3.21 5.1 4.5.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35z"/><path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 1.75.46 3.46 1.33 4.96L2 22l5.15-1.35c1.45.79 3.09 1.21 4.85 1.21 5.5 0 9.96-4.46 9.96-9.96S17.5 2.04 12 2.04z"/></svg>
+        Agendar consulta gratuita
+      </a>
+      <div class="hero-rating">
+        <div class="hero-rating-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
+        <div class="hero-rating-text"><strong>Atendimento direto</strong></div>
       </div>
     </div>
   </div>
@@ -1280,8 +1301,8 @@
     <div class="about-grid">
       <div class="about-photo" data-reveal="left" data-tilt data-tilt-max="3">
         <div class="about-photo-inner">
-          <img src="assets/logo.png" alt="Breno Lima Advocacia" />
-          <div class="about-photo-monogram">Breno Lima · Advocacia</div>
+          <img class="about-seal" src="assets/seal.png" alt="Selo Breno Lima Advocacia" />
+          <img class="about-wordmark" src="assets/wordmark-gold.svg" alt="Breno Lima Advocacia" />
         </div>
       </div>
 
@@ -1712,12 +1733,9 @@
   <div class="wrap">
     <div class="foot-top">
       <div class="foot-brand">
-        <a href="#" class="brand" style="color:#fff">
-          <img class="brand-logo-img" src="assets/logo.png" alt="Breno Lima Advocacia" />
-          <div class="brand-text">
-            <span class="brand-name">Breno Lima</span>
-            <span class="brand-tag" style="color:var(--gold)">Advocacia</span>
-          </div>
+        <a href="#" class="brand foot-brand-logo" style="color:#fff">
+          <img class="foot-seal" src="assets/seal.png" alt="Selo Breno Lima Advocacia" />
+          <img class="foot-wordmark" src="assets/wordmark-gold.svg" alt="Breno Lima Advocacia" />
         </a>
         <p>Escritório de advocacia dedicado a Direito Cível, Previdenciário, Trabalhista e Sucessões. Atendimento direto, sem intermediário.</p>
         <div class="foot-social">
