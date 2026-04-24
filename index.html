@@ -698,15 +698,12 @@
     .pstat-num{font-size:18px}
     .pstat-lbl{font-size:10px;margin-top:4px}
 
-    /* Ornamentos heráldicos mobile — compactos e alinhados */
-    .herald-corner{width:52px;height:52px}
-    .herald-corner.tl,.herald-corner.tr{top:12px}
-    .herald-corner.tl,.herald-corner.bl{left:12px}
-    .herald-corner.tr,.herald-corner.br{right:12px}
-    .hero .herald-corner.bl,.hero .herald-corner.br{bottom:70px}
-    .herald-stars svg{transform:scale(.7)}
-    .herald-frame{top:12px;left:12px;right:12px}
-    .hero .herald-frame{bottom:70px}
+    /* Ornamentos heráldicos: ocultos no mobile pra não poluir
+       — mantém só fundo (gradient + pattern de estrelas + rays) */
+    .herald-corner,
+    .herald-frame,
+    .herald-stars{display:none !important}
+    .herald-rays{opacity:.18}
 
     /* CLIENT BANNER mobile — altura fixa pra não sumir a cena */
     .client-banner{min-height:220px}
@@ -863,7 +860,6 @@
     .pstat-num{font-size:15.5px}
     .pstat-lbl{font-size:9.5px}
     .shead h2,.banner h2,.cta-inner h2,.diagnostic h2{font-size:24px}
-    .herald-corner{width:44px;height:44px}
     .client-banner{min-height:180px}
     .client-banner-img{height:180px}
     .section{padding:56px 0}
