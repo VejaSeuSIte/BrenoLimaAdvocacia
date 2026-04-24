@@ -24,7 +24,7 @@
 <meta name="twitter:description" content="Atendimento direto, sem intermediário. Análise inicial gratuita pelo WhatsApp. Cabo de Santo Agostinho/PE, Recife e online em todo Brasil." />
 <meta name="twitter:image" content="https://vejaseusite.github.io/BrenoLimaAdvocacia/assets/og-image.jpg" />
 <link rel="icon" type="image/png" href="assets/seal.png" />
-<link rel="preload" as="image" href="assets/seal.png" fetchpriority="high" />
+<link rel="preload" as="image" href="assets/seal-gold-mono.png" fetchpriority="high" />
 <link rel="preload" as="image" href="assets/wordmark-gold.svg" fetchpriority="high" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -195,22 +195,22 @@
   .hero-rating-text{font-size:14px;color:#cbd5e4;line-height:1.45}
   .hero-rating-text strong{color:#fff;font-weight:700}
 
-  /* HERO LOGO HORIZONTAL — selo + wordmark lado a lado, grande, no topo */
+  /* HERO LOGO HORIZONTAL — selo + wordmark lado a lado, centralizado */
   .hero-logo{
-    display:flex;align-items:center;justify-content:center;gap:44px;
-    padding:72px 0 40px;position:relative;
+    display:flex;align-items:center;justify-content:center;gap:40px;
+    padding:80px 32px 48px;position:relative;
+    max-width:1100px;margin:0 auto;
   }
   .hero-seal{
-    width:230px;height:auto;flex-shrink:0;
-    filter:drop-shadow(0 16px 36px rgba(0,0,0,.35)) drop-shadow(0 0 28px rgba(212,175,55,.2));
+    width:220px;height:220px;flex-shrink:0;object-fit:contain;
+    filter:drop-shadow(0 16px 36px rgba(0,0,0,.35)) drop-shadow(0 0 28px rgba(212,175,55,.25));
   }
   .hero-logo-divider{
-    width:1px;height:180px;flex-shrink:0;
-    background:linear-gradient(180deg,transparent,#d4af37,transparent);
-    opacity:.55;
+    width:1px;height:160px;flex-shrink:0;
+    background:linear-gradient(180deg,transparent,rgba(212,175,55,.7),transparent);
   }
   .hero-wordmark{
-    max-width:560px;width:100%;height:auto;
+    width:auto;height:160px;max-width:560px;flex-shrink:0;object-fit:contain;
   }
 
   /* Conteúdo centralizado abaixo da logo */
@@ -240,10 +240,10 @@
 
   @media(max-width:1020px){
     .hero{padding:40px 0 0}
-    .hero-logo{gap:32px;padding:48px 0 32px}
-    .hero-seal{width:200px}
-    .hero-logo-divider{height:150px}
-    .hero-wordmark{max-width:480px}
+    .hero-logo{gap:28px;padding:48px 24px 32px}
+    .hero-seal{width:190px;height:190px}
+    .hero-logo-divider{height:140px}
+    .hero-wordmark{height:140px;max-width:440px}
     .hero-content{padding-bottom:100px}
   }
   @media(max-width:540px){
@@ -319,7 +319,7 @@
   .about-photo{aspect-ratio:4/5;background:linear-gradient(160deg,var(--navy-1),var(--navy-3));border-radius:8px 8px 8px 80px;display:flex;align-items:flex-end;justify-content:center;position:relative;overflow:hidden;padding:40px}
   .about-photo::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0L0 20l20 20 20-20z' fill='none' stroke='rgba(255,255,255,.08)' stroke-width='.8'/%3E%3C/svg%3E");background-size:40px 40px;opacity:.9}
   .about-photo-inner{position:relative;z-index:1;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:40px 24px}
-  .about-seal{width:70%;max-width:220px;filter:drop-shadow(0 16px 30px rgba(0,0,0,.45)) drop-shadow(0 0 24px rgba(212,175,55,.18));background:transparent}
+  .about-seal{width:60%;max-width:180px;aspect-ratio:1/1;object-fit:contain;filter:drop-shadow(0 16px 30px rgba(0,0,0,.45)) drop-shadow(0 0 24px rgba(212,175,55,.22));background:transparent}
   .about-wordmark{width:90%;max-width:260px}
   .about-photo-inner::after{content:"";display:block;width:80px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.6;margin-top:-6px}
   .about-body h3{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(28px,3.5vw,40px);line-height:1.1;color:var(--ink);margin-bottom:20px;letter-spacing:-.01em}
@@ -460,7 +460,7 @@
   .foot{background:var(--navy-4);color:#c2cbd6;padding:64px 0 24px}
   .foot-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;padding-bottom:32px;border-bottom:1px solid rgba(212,175,55,.15)}
   .foot-brand-logo{display:flex;align-items:center;gap:16px;margin-bottom:18px;color:#fff}
-  .foot-seal{width:68px;height:auto;flex-shrink:0;filter:drop-shadow(0 4px 12px rgba(212,175,55,.25))}
+  .foot-seal{width:64px;height:64px;flex-shrink:0;object-fit:contain;filter:drop-shadow(0 4px 12px rgba(212,175,55,.3))}
   .foot-wordmark{max-width:260px;width:100%;height:auto}
   .foot-brand p{font-size:14px;line-height:1.65;max-width:34ch}
   .foot h5{color:#fff;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px;font-weight:700}
@@ -672,14 +672,14 @@
      MOBILE TUNING — refinamento completo para telas pequenas
      ================================================================= */
   @media(max-width:980px){
-    /* Logo horizontal vira vertical em tablets: selo em cima, divider horizontal, wordmark embaixo */
-    .hero-logo{flex-direction:column;gap:18px;padding:40px 0 24px}
-    .hero-seal{width:220px}
+    /* Logo vira vertical em tablets: selo em cima, divider horizontal, wordmark embaixo — tudo centralizado */
+    .hero-logo{flex-direction:column;gap:20px;padding:40px 20px 28px;max-width:100%}
+    .hero-seal{width:200px;height:200px}
     .hero-logo-divider{
       width:120px;height:1px;
-      background:linear-gradient(90deg,transparent,#d4af37,transparent);
+      background:linear-gradient(90deg,transparent,rgba(212,175,55,.7),transparent);
     }
-    .hero-wordmark{max-width:440px}
+    .hero-wordmark{width:100%;height:auto;max-width:420px}
     .hero-content{padding-bottom:80px}
     .hero-eye{margin-top:16px}
     .hero h1{max-width:100%}
@@ -702,12 +702,12 @@
     .nav-cta{padding:9px 14px;font-size:11px;gap:6px}
     .nav-cta svg{width:12px;height:12px}
 
-    /* HERO compacto e bonito */
+    /* HERO compacto — mobile */
     .hero{padding:28px 0 0}
-    .hero-logo{gap:14px;padding:24px 0 18px}
-    .hero-seal{width:180px}
+    .hero-logo{gap:14px;padding:20px 16px 18px}
+    .hero-seal{width:160px;height:160px}
     .hero-logo-divider{width:90px}
-    .hero-wordmark{max-width:320px}
+    .hero-wordmark{max-width:300px}
     .hero-content{padding-bottom:54px}
     .hero-eye{margin-top:8px;font-size:11px;letter-spacing:.18em;gap:10px;margin-bottom:16px}
     .hero-eye::before{width:28px}
@@ -774,7 +774,7 @@
     .about-grid{gap:32px}
     .about-photo{max-width:280px;padding:20px;border-radius:6px 6px 6px 60px}
     .about-photo-inner{padding:24px 14px;gap:14px}
-    .about-seal{width:60%;max-width:150px}
+    .about-seal{width:55%;max-width:140px}
     .about-wordmark{width:95%;max-width:220px}
     .about-body h3{font-size:26px;margin-bottom:16px}
     .about-body p{font-size:15px;line-height:1.65}
@@ -855,7 +855,7 @@
     /* FOOTER */
     .foot{padding:48px 0 20px}
     .foot-top{gap:28px;margin-bottom:28px;padding-bottom:24px}
-    .foot-seal{width:56px}
+    .foot-seal{width:52px;height:52px}
     .foot-wordmark{max-width:200px}
     .foot-brand p{font-size:13px;margin-top:12px}
     .foot-social{margin-top:14px}
@@ -878,8 +878,8 @@
     .nav-cta{padding:8px 12px;font-size:10.5px}
     .nav-cta span,.nav-cta{letter-spacing:.01em}
     .hero h1{font-size:clamp(24px,8vw,32px)}
-    .hero-seal{width:140px}
-    .hero-wordmark{max-width:280px}
+    .hero-seal{width:130px;height:130px}
+    .hero-wordmark{max-width:260px}
     .hero-logo-divider{width:70px}
     .shead h2,.banner h2,.cta-inner h2,.diagnostic h2{font-size:24px}
     .client-banner{min-height:180px}
@@ -1017,7 +1017,7 @@
   <div class="wrap">
     <!-- Logo horizontal grande no topo (selo + wordmark) -->
     <div class="hero-logo">
-      <img class="hero-seal" src="assets/seal.png" alt="Selo Breno Lima Advocacia" fetchpriority="high" decoding="async" />
+      <img class="hero-seal" src="assets/seal-gold-mono.png" alt="Selo Breno Lima Advocacia" fetchpriority="high" decoding="async" />
       <div class="hero-logo-divider" aria-hidden="true"></div>
       <img class="hero-wordmark" src="assets/wordmark-gold.svg" alt="Breno Lima Advocacia" />
     </div>
@@ -1301,7 +1301,7 @@
     <div class="about-grid">
       <div class="about-photo" data-reveal="left" data-tilt data-tilt-max="3">
         <div class="about-photo-inner">
-          <img class="about-seal" src="assets/seal.png" alt="Selo Breno Lima Advocacia" />
+          <img class="about-seal" src="assets/seal-gold-mono.png" alt="Selo Breno Lima Advocacia" />
           <img class="about-wordmark" src="assets/wordmark-gold.svg" alt="Breno Lima Advocacia" />
         </div>
       </div>
@@ -1734,7 +1734,7 @@
     <div class="foot-top">
       <div class="foot-brand">
         <a href="#" class="brand foot-brand-logo" style="color:#fff">
-          <img class="foot-seal" src="assets/seal.png" alt="Selo Breno Lima Advocacia" />
+          <img class="foot-seal" src="assets/seal-gold-mono.png" alt="Selo Breno Lima Advocacia" />
           <img class="foot-wordmark" src="assets/wordmark-gold.svg" alt="Breno Lima Advocacia" />
         </a>
         <p>Escritório de advocacia dedicado a Direito Cível, Previdenciário, Trabalhista e Sucessões. Atendimento direto, sem intermediário.</p>
